@@ -23,7 +23,7 @@ A handheld calculator built around an ESP32-C3. It has a keypad, a small OLED sc
 - **Keypad:** 30 keys in a 6 × 5 matrix, read through an MCP23017 I/O expander at I2C address 0x20
 - **Screen:** 1.54-inch 128 × 64 OLED with an SSD1317 controller, connected over I2C (header J2: GND, VCC, SCL, SDA)
 - **Power:** USB-C input, MCP73831 battery charger, AP2112K-3.3 regulator, LiPo cable (J3)
-- **Extra buttons:** SW32 is reset, SW33 is boot. SW31 is a power switch.
+- **Power switch:** SW31.
 
 ## Building the firmware
 

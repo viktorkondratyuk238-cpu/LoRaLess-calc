@@ -15,7 +15,6 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
   - Screen header J2 pin order is GND, VCC, SCL, SDA. SCL is IO5 and SDA is IO4.
   - Keypad: 6 rows (GPA0 to GPA5) by 5 columns (GPB0 to GPB4). All 30 keys (SW1 to SW30) are placed, each with a unique row and column.
   - The unused expander pins (GPA6, GPA7, GPB5, GPB6, GPB7) are not connected to anything, so driving them low is safe.
-  - SW32 is the reset button (ESP32 EN). SW33 is the boot button (IO9).
   - SW31 appears to switch the battery supply, but I haven't traced it fully.
 
 ### Firmware build
