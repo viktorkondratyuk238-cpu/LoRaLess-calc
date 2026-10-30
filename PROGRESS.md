@@ -33,8 +33,8 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
 - The Windows Smart App Control setting was blocking the test programs. It has been turned off.
 
 ### Screen
-- The screen is an SSD1307 (128x64, I2C). U8g2, the display library, has no SSD1307 driver.
-- `firmware/src/display_hw.h` uses the SSD1306 128x64 driver as the closest match. The code and README both say this is unverified.
+- The screen controller is an SSD1317 (I2C). The user's note also says 128x64, but U8g2's SSD1317 driver only supports 96x96 panels, so the panel size needs confirming.
+- `firmware/src/display_hw.h` uses the SSD1306 128x64 driver as a stand-in. The code and README both say this is unverified.
 
 ### Tools installed on this PC (outside the project)
 - Python 3.12.10
@@ -45,7 +45,7 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
 ## What is still to do
 
 ### Firmware
-- **Display:** the screen is untested. The SSD1306 driver may or may not work with the SSD1307. If the screen stays blank or the image is wrong, change the constructor in `display_hw.h`, or write an SSD1307 driver.
+- **Display:** the screen is untested. Confirm the panel size (128x64 or 96x96). Then choose a driver: either an SSD1317 driver that matches the panel, or a stand-in. If the screen stays blank or the image is wrong, change the constructor in `display_hw.h`.
 - **Fonts:** logisoso62 is not confirmed, so the 1-row size uses logisoso38.
 - **Character widths:** `CALC_LEVELS`, `COLS` and `BUBBLE_TEXT` are placeholders until measured on the real screen.
 - **Chat bubbles:** still ASCII edges. Rounded boxes are not done.
@@ -54,7 +54,7 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
 - **Test file:** `test.cpp` should get pass/fail assertions instead of printed output.
 
 ### Hardware and PCB
-- **Bench parts:** not yet bought. Needed are two ESP32-C3 dev boards, one MCP23017 breakout, one SSD1307 4-pin I2C OLED, a few switches and diodes, breadboard and jumper wires.
+- **Bench parts:** not yet bought. Needed are two ESP32-C3 dev boards, one MCP23017 breakout, one SSD1317 4-pin I2C OLED, a few switches and diodes, breadboard and jumper wires.
 - **Power and charging:** the charger (U3), regulator (U5), USB-C input (J1) and power switch (SW31) are untested.
 - **Keypad:** the full 30-key matrix has not been tested with real key presses.
 - **BOM:** decide whether J2 (pin header) and J3 (LiPo cable) should be added.

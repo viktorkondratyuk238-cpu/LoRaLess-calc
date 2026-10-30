@@ -12,8 +12,9 @@ namespace hw {
 // Longest calculator row: 12 characters plus the end marker.
 constexpr uint8_t ROW_BUF = 13;
 
-// The controller constructor. The screen uses an SSD1307 (128x64, I2C). U8g2 has no SSD1307
-// driver, so this uses the SSD1306 128x64 driver as the closest match. Not verified on the screen.
+// The controller constructor. The screen uses an SSD1317 (I2C). U8g2 only has an SSD1317 driver
+// for 96x96 panels, so this uses the SSD1306 128x64 driver as a stand-in. Not verified on the
+// screen, and it does not match the SSD1317 driver's panel size. Confirm the panel size first.
 // If the screen does not light up or the image is wrong, this is the line to change.
 static U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, U8X8_PIN_NONE);
 
