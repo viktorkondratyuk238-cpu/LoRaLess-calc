@@ -22,6 +22,7 @@ static const int I2C_SDA = 4;             // ESP32 IO4
 static const int I2C_SCL = 5;             // ESP32 IO5
 static const uint8_t ROW_PIN[6] = {0, 1, 2, 3, 4, 5};     // GPA0..GPA5, driven low one at a time
 static const uint8_t COL_PIN[5] = {8, 9, 10, 11, 12};     // GPB0..GPB4, inputs with pull-ups
+static const uint8_t UNUSED_PIN[5] = {6, 7, 13, 14, 15}; // GPA6, GPA7, GPB5..GPB7: driven low so they never float
 static const uint8_t DEBOUNCE = 3;        // scans a key must stay in the same state
 
 Adafruit_MCP23X17 mcp;
@@ -451,15 +452,18 @@ static void buildExpr(char* line, size_t cap) {
   if (nent > 0) strncat(line, entry, cap - strlen(line) - 1);
 }
 
+// The text the calculator screen shows: the result, "Syntax error", or the expression being typed.
+static void calcText(char* text, size_t cap) {
+  text[0] = 0;
+  if (gErr) strncpy(text, "Syntax error", cap - 1);
+  else if (resultShown) fmtVal(lastRes, text, cap);
+  else buildExpr(text, cap);
+}
+
 // The calculator screen: the expression in rows, or the result / "Syntax error" in its place.
 static void showState() {
-  char expr[160];
-  buildExpr(expr, sizeof expr);
-
-  char text[48] = "";
-  if (gErr) strcpy(text, "Syntax error");
-  else if (resultShown) fmtVal(lastRes, text, sizeof text);
-  else strcpy(text, expr);
+  char text[160];
+  calcText(text, sizeof text);
 
 #ifdef ARDUINO
   hw::drawCalc(text, gErr, app.msg.hasUnread());
@@ -597,8 +601,6 @@ void setup() {
     mcp.digitalWrite(ROW_PIN[r], HIGH);
   }
   for (int c = 0; c < 5; c++) mcp.pinMode(COL_PIN[c], INPUT_PULLUP);
-  // Unused expander pins: GPA6, GPA7, GPB5, GPB6, GPB7. Drive them low so they never float.
-  static const uint8_t UNUSED_PIN[5] = {6, 7, 13, 14, 15};
   for (uint8_t p : UNUSED_PIN) {
     mcp.pinMode(p, OUTPUT);
     mcp.digitalWrite(p, LOW);

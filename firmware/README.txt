@@ -12,14 +12,18 @@ Chip code (goes on the board, build with PlatformIO: pio run -e calc1 ... calc4)
 Tests (run on a computer, no board needed):
   test.cpp          calculator cases from the handoff summary (16)
   test_main.cpp     keypad routing, layout, sign and error checks (23)
-  test_ui.cpp       screen logic tests (42)
+  test_ui.cpp       screen logic tests (47)
   test_screen.cpp   screen text tests (31)
   test_comm.cpp     messaging tests (53)
+  test_util.h       helper: peer(k) gives the other boards' ids, so tests work for any DEVICE_ID
+  run_tests.sh      builds and runs every test for DEVICE_ID 1 to 4
   stubs/            fake Arduino, Wire and MCP23017 headers so the tests run on a computer
 
-Build and run a test, for example:
-  g++ -std=c++17 -Istubs -Isrc -o test_main test_main.cpp && ./test_main
-  g++ -std=c++17 -DDEVICE_ID=1 -o test_comm test_comm.cpp && ./test_comm
+Run all tests for every board:
+  bash run_tests.sh
+
+Build and run one test, for example:
+  g++ -std=c++17 -DDEVICE_ID=1 -Istubs -Isrc -o test_comm test_comm.cpp && ./test_comm
 
 Tools:
   tools/netcheck.py reads the KiCad schematic and reports which pins connect to which nets.

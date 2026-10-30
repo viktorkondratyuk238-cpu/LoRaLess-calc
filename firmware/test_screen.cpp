@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include "screen_text.h"
+#include "test_util.h"
 #include <stdio.h>
 using namespace ui;
 
@@ -22,13 +23,13 @@ int main() {
   // Contacts: selected row marked, unread marked
   {
     App a;
-    a.onReceive(pkt(2, "hi"), 1000);
+    a.onReceive(pkt(peer(0), "hi"), 1000);
     a.sel = 1;
     lines.clear();
     screen::forEachContactLine(a, grab);
     CHECK(lines.size() == 4, "four contact rows: ALL and three other boards");
     CHECK(lines[1][0] == '*' && lines[0][0] == ' ', "selected row marked");
-    CHECK(lines[1].find('#') != std::string::npos, "unread marked on CALC 2");
+    CHECK(lines[1].find('#') != std::string::npos, "unread marked on the first other board");
     CHECK(lines[0].find('#') == std::string::npos, "no unread on ALL");
   }
   // Bubbles: your message on the left, theirs on the right with their name above
@@ -36,20 +37,20 @@ int main() {
     App a;
     a.handle(Key::COMMA, 0); a.sel = 0; a.handle(Key::EQ, 0);      // open ALL
     a.msg.send(comm::ALL_ID, "yo", 2, 100, &a.outbox);              // your message
-    a.onReceive(pkt(3, "hi", comm::ALL_ID), 200);                   // CALC 3 to ALL
+    a.onReceive(pkt(peer(1), "hi", comm::ALL_ID), 200);             // another board to ALL
     for (int i = 0; i < 10; i++) a.handle(Key::LP, 0);              // scroll to the top
     lines.clear();
     screen::forEachChatLine(a, grab);
-    // Your bubble (3 lines), then CALC 3's name and bubble (4 lines). Six lines fit on screen.
+    // Your bubble (3 lines), then the sender's name and bubble (4 lines). Six lines fit on screen.
+    std::string name = "CALC " + std::to_string(peer(1));
     CHECK(lines.size() == 6, "six lines shown at the top of the chat");
     CHECK(lines[0] == pad("+--+"), "your bubble on the left");
     CHECK(lines[1] == pad("|yo|"), "your text inside the bubble");
-    CHECK(lines[3] == pad(std::string(15, ' ') + "CALC 3"), "sender name on the right");
+    CHECK(lines[3] == pad(std::string(21 - name.size(), ' ') + name), "sender name on the right");
     CHECK(lines[4] == pad(std::string(17, ' ') + "+--+"), "their bubble on the right");
     CHECK(lines[5] == pad(std::string(17, ' ') + "|hi|"), "their text inside the bubble");
     // Back to the bottom: the typing line is last
-    for (int i = 0; i < 1; i++) a.handle(Key::RP, 0);
-    a.scroll = 0;
+    for (int i = 0; i < 10; i++) a.handle(Key::RP, 0);
     lines.clear();
     screen::forEachChatLine(a, grab);
     CHECK(lines.back() == pad(""), "empty typing line at the bottom");
@@ -90,7 +91,7 @@ int main() {
     lines.clear();
     screen::forEachChatHeader(a, grab);
     CHECK(lines.size() == 1 && lines[0].substr(0, 3) == "ALL" && lines[0][20] != '#', "header shows ALL, no square");
-    a.onReceive(pkt(2, "x"), 50);     // CALC 2 writes to me, but I'm in ALL
+    a.onReceive(pkt(peer(0), "x"), 50);     // another board writes to me, but I'm in ALL
     lines.clear();
     screen::forEachChatHeader(a, grab);
     CHECK(lines[0][20] == '#', "header square when something is unread");
@@ -100,7 +101,7 @@ int main() {
     App a;
     a.handle(Key::COMMA, 0); a.sel = 0; a.handle(Key::EQ, 0);
     for (int i = 0; i < 10; i++) {
-      comm::Packet p{}; p.from = 2; p.to = comm::ALL_ID; p.len = 40; memset(p.text, 'a' + i, 40); p.text[40] = 0;
+      comm::Packet p{}; p.from = peer(0); p.to = comm::ALL_ID; p.len = 40; memset(p.text, 'a' + i, 40); p.text[40] = 0;
       a.onReceive(p, 1000 + i);
     }
     lines.clear();

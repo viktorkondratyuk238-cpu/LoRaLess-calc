@@ -25,11 +25,13 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
 - `pio run` now builds `calc1`, `calc2`, `calc3` and `calc4` successfully. This is a compile check only.
 
 ### Host tests (run on the PC, no board)
-- `test.cpp`: 16 of 16 calculator cases match the expected values in the file's comments. The file prints results without pass/fail checks, so this was checked by hand.
+- `test.cpp`: 16 of 16 calculator cases pass, with real pass/fail checks.
 - `test_main.cpp`: 23 passed, 0 failed.
-- `test_ui.cpp`: 42 passed, 0 failed.
+- `test_ui.cpp`: 47 passed, 0 failed.
 - `test_screen.cpp`: 31 passed, 0 failed.
 - `test_comm.cpp`: 53 passed, 0 failed.
+- `run_tests.sh` runs all of them for DEVICE_ID 1 to 4: 20 of 20 runs pass. The tests pick the other boards with `peer(k)` (in `test_util.h`), not fixed numbers.
+- Checked that the tests can fail: a wrong error message and a moved unused-pin entry each made the matching test fail.
 - The Windows Smart App Control setting was blocking the test programs. It has been turned off.
 
 ### Screen
@@ -51,7 +53,7 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
 - **Chat bubbles:** still ASCII edges. Rounded boxes are not done.
 - **ESP-NOW:** the radio code has never run on hardware. Two boards need to send and receive a message.
 - **Keypad:** the scan and debounce logic has only been tested against fakes.
-- **Test file:** `test.cpp` should get pass/fail assertions instead of printed output.
+- **Not yet tested on the PC:** calculator memory keys (MEM W, MR, MC), keypad column digits 0 to 2, and the debounce logic.
 
 ### Hardware and PCB
 - **Bench parts:** not yet bought. Needed are two ESP32-C3 dev boards, one MCP23017 breakout, one SSD1317 4-pin I2C OLED, a few switches and diodes, breadboard and jumper wires.
