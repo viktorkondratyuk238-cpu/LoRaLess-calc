@@ -142,6 +142,7 @@ class Link {
   static constexpr uint8_t MAX_TRIES = 4;     // sends per message before giving up
   static constexpr uint32_t RETRY_MS = 250;   // wait for an ack before resending
   static constexpr uint32_t JITTER_MS = 150;  // random extra wait, so boards don't resend in step
+  static constexpr uint32_t DEDUPE_MS = 5000; // a repeat of the last message number within this time is a duplicate
 
   // Queues a packet and gives it a message number. Returns false if the queue is full.
   bool push(Packet p) {
@@ -201,7 +202,7 @@ class Link {
   template <typename Store>
   bool incoming(const Packet& p, uint32_t now, Packet* reply, Store store) {
     if (p.kind != KIND_MSG) {
-      onAck(p, now);
+      if (p.to == DEVICE_ID) onAck(p, now);   // acks are broadcast, so ignore other boards' acks
       return false;
     }
     if (p.to == ALL_ID) {
@@ -209,9 +210,14 @@ class Link {
       return false;
     }
     if (p.to != DEVICE_ID || p.from < 1 || p.from > 4) return false;
-    bool dup = (p.id == lastRx[p.from]);      // the sender resent it after a lost ack
+    // The sender resent it after a lost ack. Only a repeat within DEDUPE_MS counts,
+    // so a rebooted sender starting again at message 1 is not mistaken for a repeat.
+    bool dup = (p.id == lastRx[p.from]) && (uint32_t)(now - lastRxTime[p.from]) < DEDUPE_MS;
     bool ok = dup || store(p);
-    if (ok) lastRx[p.from] = p.id;
+    if (ok) {
+      lastRx[p.from] = p.id;
+      lastRxTime[p.from] = now;
+    }
     reply->from = DEVICE_ID;
     reply->to = p.from;
     reply->len = 0;
@@ -239,6 +245,7 @@ class Link {
   uint8_t count = 0;
   uint8_t nextId = 1;
   uint8_t lastRx[5] = {0};     // last message number seen from each board (index = board id)
+  uint32_t lastRxTime[5] = {0};
   int8_t result = -1;          // -1 none, 0 given up, 1 delivered
 
   void pop() {
