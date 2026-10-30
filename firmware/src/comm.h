@@ -28,10 +28,16 @@ constexpr char SYM_SUB = (char)0x82;   // −
 constexpr char SYM_POW = (char)0x83;   // x with a small raised y (power)
 
 // What goes over the radio.
+constexpr uint8_t KIND_MSG = 0;        // a chat message
+constexpr uint8_t KIND_ACK_OK = 1;     // the receiver stored message `id`
+constexpr uint8_t KIND_ACK_FAIL = 2;   // the receiver could not store message `id`
+
 struct Packet {
   uint8_t from;
   uint8_t to;
   uint8_t len;
+  uint8_t id;      // message number, 1..255 (0 for ALL, which is never acked)
+  uint8_t kind;    // KIND_MSG, KIND_ACK_OK or KIND_ACK_FAIL
   char text[MAX_MSG_LEN + 1];
 };
 
@@ -124,6 +130,120 @@ class Messenger {
     memcpy(m.text, text, len);
     m.text[len] = 0;
     return m;
+  }
+};
+
+// Sends messages one at a time and waits for an ack from the receiver.
+// A message is resent until it is acked or MAX_TRIES is used up.
+// Messages to ALL are sent once and are not acked.
+class Link {
+ public:
+  static constexpr uint8_t QUEUE = 4;         // messages waiting to go out
+  static constexpr uint8_t MAX_TRIES = 4;     // sends per message before giving up
+  static constexpr uint32_t RETRY_MS = 250;   // wait for an ack before resending
+  static constexpr uint32_t JITTER_MS = 150;  // random extra wait, so boards don't resend in step
+
+  // Queues a packet and gives it a message number. Returns false if the queue is full.
+  bool push(Packet p) {
+    if (count == QUEUE) return false;
+    if (p.to == ALL_ID) {
+      p.id = 0;
+    } else {
+      p.id = nextId;
+      nextId = (nextId == 255) ? 1 : nextId + 1;
+    }
+    p.kind = KIND_MSG;
+    q[count].p = p;
+    q[count].tries = 0;
+    q[count].nextAt = 0;
+    count++;
+    return true;
+  }
+
+  // Call often. Returns true and fills *out when a packet should be sent now.
+  bool poll(uint32_t now, uint32_t rnd, Packet* out) {
+    if (!count) return false;
+    Item& h = q[0];
+    if (h.p.to == ALL_ID) {
+      *out = h.p;
+      pop();
+      return true;
+    }
+    if (h.tries) {
+      if (now < h.nextAt) return false;
+      if (h.tries >= MAX_TRIES) {
+        pop();
+        result = 0;
+        return false;
+      }
+    }
+    *out = h.p;
+    h.tries++;
+    h.nextAt = now + RETRY_MS + (rnd % JITTER_MS);
+    return true;
+  }
+
+  // Handles an ack from the receiver. A refusal means it will be resent after RETRY_MS.
+  void onAck(const Packet& p, uint32_t now) {
+    if (!count) return;
+    Item& h = q[0];
+    if (p.from != h.p.to || p.id != h.p.id) return;
+    if (p.kind == KIND_ACK_OK) {
+      pop();
+      result = 1;
+    } else if (p.kind == KIND_ACK_FAIL) {
+      h.nextAt = now + RETRY_MS;
+    }
+  }
+
+  // Handles one packet from the radio. Calls store() for each new message for this board.
+  // Returns true if *reply should be sent back (an ack).
+  template <typename Store>
+  bool incoming(const Packet& p, uint32_t now, Packet* reply, Store store) {
+    if (p.kind != KIND_MSG) {
+      onAck(p, now);
+      return false;
+    }
+    if (p.to == ALL_ID) {
+      store(p);
+      return false;
+    }
+    if (p.to != DEVICE_ID || p.from < 1 || p.from > 4) return false;
+    bool dup = (p.id == lastRx[p.from]);      // the sender resent it after a lost ack
+    bool ok = dup || store(p);
+    if (ok) lastRx[p.from] = p.id;
+    reply->from = DEVICE_ID;
+    reply->to = p.from;
+    reply->len = 0;
+    reply->id = p.id;
+    reply->kind = ok ? KIND_ACK_OK : KIND_ACK_FAIL;
+    reply->text[0] = 0;
+    return true;
+  }
+
+  // Returns true once when a message has finished: true for delivered, false for given up.
+  bool takeResult(bool* delivered) {
+    if (result < 0) return false;
+    *delivered = (result == 1);
+    result = -1;
+    return true;
+  }
+
+ private:
+  struct Item {
+    Packet p;
+    uint8_t tries;
+    uint32_t nextAt;
+  };
+  Item q[QUEUE];
+  uint8_t count = 0;
+  uint8_t nextId = 1;
+  uint8_t lastRx[5] = {0};     // last message number seen from each board (index = board id)
+  int8_t result = -1;          // -1 none, 0 given up, 1 delivered
+
+  void pop() {
+    for (uint8_t i = 1; i < count; i++) q[i - 1] = q[i];
+    count--;
   }
 };
 

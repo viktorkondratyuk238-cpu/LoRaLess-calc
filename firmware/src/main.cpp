@@ -547,10 +547,12 @@ static void printScreen() {
 #endif
 }
 
+static comm::Link msgLink;   // outgoing messages wait here until acked
+
 // Radio stand-in for now: prints what would be sent. ESP-NOW replaces this later.
 static void sendPacket(const comm::Packet& p) {
 #ifdef ARDUINO
-  radio::send(p);
+  if (!msgLink.push(p)) Serial.println("Outbox full, message not sent");
 #else
   char text[comm::MAX_MSG_LEN + 1];
   screen::toAscii(text, p.text, p.len);
@@ -575,7 +577,12 @@ static void onKey(Key k) {
 
 // A packet from the radio (ESP-NOW will call this later).
 static void onRadioPacket(const comm::Packet& p) {
-  app.onReceive(p, millis());
+  comm::Packet ack;
+  if (msgLink.incoming(p, millis(), &ack,[](const comm::Packet& q) { return app.onReceive(q, millis()); })) {
+#ifdef ARDUINO
+    radio::send(ack);
+#endif
+  }
   if (app.screen != ui::Screen::CALC) printScreen();
 }
 
@@ -611,6 +618,10 @@ void setup() {
 void loop() {
 #ifdef ARDUINO
   radio::drain(onRadioPacket);   // packets that arrived since the last loop
+  comm::Packet out;
+  if (msgLink.poll(millis(), random(comm::Link::JITTER_MS), &out)) radio::send(out);
+  bool delivered;
+  if (msgLink.takeResult(&delivered)) Serial.println(delivered ? "DELIVERED" : "NOT DELIVERED");
 #endif
   for (int r = 0; r < 6; r++) {
     mcp.digitalWrite(ROW_PIN[r], LOW);
