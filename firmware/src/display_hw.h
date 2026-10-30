@@ -3,6 +3,7 @@
 #pragma once
 #ifdef ARDUINO
 #include <U8g2lib.h>
+#include "ssd1317_128x64.h"
 #include <string.h>
 #include "ui.h"
 #include "screen_text.h"
@@ -13,10 +14,9 @@ namespace hw {
 constexpr uint8_t ROW_BUF = 13;
 
 // The controller constructor. The screen is a 128x64 panel with an SSD1317 controller (I2C).
-// U8g2 only has an SSD1317 driver for 96x96 panels, so this uses the SSD1306 128x64 driver as a
-// stand-in. The size matches, but the controller does not. Not verified on the screen.
-// If the screen does not light up or the image is wrong, this is the line to change.
-static U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, U8X8_PIN_NONE);
+// The driver is in ssd1317_128x64.h. Not verified on the screen.
+// If the screen does not light up or the image is wrong, the init sequence there is the place to check.
+static U8G2_SSD1317_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, U8X8_PIN_NONE);
 
 inline void begin() {
   u8g2.begin();

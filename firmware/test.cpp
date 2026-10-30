@@ -1,7 +1,9 @@
 #include "main.cpp"
 #include <cstdio>
-// Press a sequence of keys given as characters, then print the final display line.
-static void press(const char* name, const char* keys) {
+static int fails = 0, passes = 0;
+
+// Press a sequence of keys given as characters, and check the final display line.
+static void press(const char* keys, const char* expect) {
   clearCalc();
   for (const char* p = keys; *p; p++) {
     Key k = K_NONE;
@@ -19,29 +21,35 @@ static void press(const char* name, const char* keys) {
     }
     if (k != K_NONE) onKey(k);
   }
-  printf("TEST %-28s -> ", name);
   char res[48] = "";
   if (gErr) strcpy(res, "Error");
   else if (resultShown) fmtVal(lastRes, res, sizeof res);
   else strcpy(res, "(no result)");
-  printf("%s\n", res);
+  bool ok = !strcmp(res, expect);
+  if (ok) passes++;
+  else fails++;
+  printf("%s %-22s -> %s (expected %s)\n", ok ? "PASS" : "FAIL", keys, res, expect);
 }
+
 int main() {
-  press("2+3*4=",            "2+3*4=");      // expect 14
-  press("9-2=-3=",           "9-2=-3=");     // expect 4
-  press("2^3^2=",            "2^3^2=");      // expect 512
-  press("10/5=  then F<->D", "10/5=F");      // expect 2/1
-  press("10/5= F COMP 5 =",  "10/5=FP5=");   // expect 10/5
-  press("1/0=",              "1/0=");        // expect Error
-  press("(2+3=",             "(2+3=");       // expect Error
-  press("2(3+1)=",           "2(3+1)=");     // expect 8
-  press("sqrt16=",           "R16=");        // expect 4
-  press("16 sqrt=",          "16R=");        // expect 4
-  press("x^2 of 3=",         "3Q=");         // expect 9
-  press("2.5*2=",            "2.5*2=");      // expect 5
-  press("5 +/- *3=",         "5B*3=");       // expect -15
-  press("+/- 5 =",           "B5=");         // expect -5
-  press("2+3= then +/-",     "2+3=B");       // expect -5
-  press("2 - +/- 3 =",       "2-B3=");       // expect 5
-  return 0;
+  Serial.silent = true;      // the calculator prints its screen to serial; keep that out of the output
+  press("2+3*4=",   "14");
+  press("9-2=-3=",  "4");
+  press("2^3^2=",   "512");
+  press("10/5=F",   "2/1");    // F<->D turns the result into a fraction
+  press("10/5=FP5=", "10/5");  // COMP: 2/1 x 5 keeps the fraction form
+  press("1/0=",     "Error");
+  press("(2+3=",    "Error");
+  press("2(3+1)=",  "8");      // implicit multiplication
+  press("R16=",     "4");      // sqrt key first
+  press("16R=",     "4");      // sqrt key after the number
+  press("3Q=",      "9");      // x^2 key
+  press("2.5*2=",   "5");
+  press("5B*3=",    "-15");    // +/- on the number being typed
+  press("B5=",      "-5");
+  press("2+3=B",    "-5");     // +/- on a result
+  press("2-B3=",    "5");
+
+  printf("\n%d passed, %d failed\n", passes, fails);
+  return fails ? 1 : 0;
 }

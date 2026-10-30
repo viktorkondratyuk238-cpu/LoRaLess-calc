@@ -12,14 +12,18 @@ Chip code (goes on the board, build with PlatformIO: pio run -e calc1 ... calc4)
 Tests (run on a computer, no board needed):
   test.cpp          calculator cases from the handoff summary (16)
   test_main.cpp     keypad routing, layout, sign and error checks (23)
-  test_ui.cpp       screen logic tests (42)
+  test_ui.cpp       screen logic tests (47)
   test_screen.cpp   screen text tests (31)
   test_comm.cpp     messaging tests (53)
+  test_util.h       helper: peer(k) gives the other boards' ids, so tests work for any DEVICE_ID
+  run_tests.sh      builds and runs every test for DEVICE_ID 1 to 4
   stubs/            fake Arduino, Wire and MCP23017 headers so the tests run on a computer
 
-Build and run a test, for example:
-  g++ -std=c++17 -Istubs -Isrc -o test_main test_main.cpp && ./test_main
-  g++ -std=c++17 -DDEVICE_ID=1 -o test_comm test_comm.cpp && ./test_comm
+Run all tests for every board:
+  bash run_tests.sh
+
+Build and run one test, for example:
+  g++ -std=c++17 -DDEVICE_ID=1 -Istubs -Isrc -o test_comm test_comm.cpp && ./test_comm
 
 Tools:
   tools/netcheck.py reads the KiCad schematic and reports which pins connect to which nets.
@@ -28,7 +32,7 @@ Tools:
 Open items (need the hardware or a PlatformIO build):
   - Display font names: logisoso62 is not confirmed, so the 1-row size uses logisoso38.
   - Display controller: the screen is a 128x64 panel with an SSD1317 controller (I2C). U8g2 only has
-    an SSD1317 driver for 96x96 panels, so display_hw.h uses the SSD1306 128x64 driver as a stand-in.
+    an SSD1317 driver for 96x96 panels, so ssd1317_128x64.h has its own 128x64 driver (untested).
     Not verified on the screen; change one line if it fails.
   - Chat bubbles use ASCII edges for now (rounded boxes later).
   - Character widths (CALC_LEVELS, COLS, BUBBLE_TEXT) are placeholders until measured.

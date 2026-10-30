@@ -5,9 +5,10 @@
 #include <string.h>
 #include <unistd.h>
 struct SerialStub {
+  bool silent = false;               // tests set this to keep the calculator's serial display out of the output
   void begin(long) {}
-  void println(const char* s) { printf("%s\n", s); }
-  void printf(const char* f, ...) { va_list a; va_start(a, f); vprintf(f, a); va_end(a); }
+  void println(const char* s) { if (!silent) printf("%s\n", s); }
+  void printf(const char* f, ...) { if (silent) return; va_list a; va_start(a, f); vprintf(f, a); va_end(a); }
 };
 static SerialStub Serial;
 inline void delay(unsigned long) {}

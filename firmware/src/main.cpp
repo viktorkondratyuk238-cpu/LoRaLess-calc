@@ -22,6 +22,7 @@ static const int I2C_SDA = 4;             // ESP32 IO4
 static const int I2C_SCL = 5;             // ESP32 IO5
 static const uint8_t ROW_PIN[6] = {0, 1, 2, 3, 4, 5};     // GPA0..GPA5, driven low one at a time
 static const uint8_t COL_PIN[5] = {8, 9, 10, 11, 12};     // GPB0..GPB4, inputs with pull-ups
+static const uint8_t UNUSED_PIN[5] = {6, 7, 13, 14, 15}; // GPA6, GPA7, GPB5..GPB7: driven low so they never float
 static const uint8_t DEBOUNCE = 3;        // scans a key must stay in the same state
 
 Adafruit_MCP23X17 mcp;
@@ -451,15 +452,18 @@ static void buildExpr(char* line, size_t cap) {
   if (nent > 0) strncat(line, entry, cap - strlen(line) - 1);
 }
 
+// The text the calculator screen shows: the result, "Syntax error", or the expression being typed.
+static void calcText(char* text, size_t cap) {
+  text[0] = 0;
+  if (gErr) strncpy(text, "Syntax error", cap - 1);
+  else if (resultShown) fmtVal(lastRes, text, cap);
+  else buildExpr(text, cap);
+}
+
 // The calculator screen: the expression in rows, or the result / "Syntax error" in its place.
 static void showState() {
-  char expr[160];
-  buildExpr(expr, sizeof expr);
-
-  char text[48] = "";
-  if (gErr) strcpy(text, "Syntax error");
-  else if (resultShown) fmtVal(lastRes, text, sizeof text);
-  else strcpy(text, expr);
+  char text[160];
+  calcText(text, sizeof text);
 
 #ifdef ARDUINO
   hw::drawCalc(text, gErr, app.msg.hasUnread());
@@ -543,10 +547,12 @@ static void printScreen() {
 #endif
 }
 
+static comm::Link msgLink;   // outgoing messages wait here until acked
+
 // Radio stand-in for now: prints what would be sent. ESP-NOW replaces this later.
 static void sendPacket(const comm::Packet& p) {
 #ifdef ARDUINO
-  radio::send(p);
+  if (!msgLink.push(p)) Serial.println("Outbox full, message not sent");
 #else
   char text[comm::MAX_MSG_LEN + 1];
   screen::toAscii(text, p.text, p.len);
@@ -571,7 +577,12 @@ static void onKey(Key k) {
 
 // A packet from the radio (ESP-NOW will call this later).
 static void onRadioPacket(const comm::Packet& p) {
-  app.onReceive(p, millis());
+  comm::Packet ack;
+  if (msgLink.incoming(p, millis(), &ack,[](const comm::Packet& q) { return app.onReceive(q, millis()); })) {
+#ifdef ARDUINO
+    radio::send(ack);
+#endif
+  }
   if (app.screen != ui::Screen::CALC) printScreen();
 }
 
@@ -597,8 +608,6 @@ void setup() {
     mcp.digitalWrite(ROW_PIN[r], HIGH);
   }
   for (int c = 0; c < 5; c++) mcp.pinMode(COL_PIN[c], INPUT_PULLUP);
-  // Unused expander pins: GPA6, GPA7, GPB5, GPB6, GPB7. Drive them low so they never float.
-  static const uint8_t UNUSED_PIN[5] = {6, 7, 13, 14, 15};
   for (uint8_t p : UNUSED_PIN) {
     mcp.pinMode(p, OUTPUT);
     mcp.digitalWrite(p, LOW);
@@ -609,6 +618,10 @@ void setup() {
 void loop() {
 #ifdef ARDUINO
   radio::drain(onRadioPacket);   // packets that arrived since the last loop
+  comm::Packet out;
+  if (msgLink.poll(millis(), random(comm::Link::JITTER_MS), &out)) radio::send(out);
+  bool delivered;
+  if (msgLink.takeResult(&delivered)) Serial.println(delivered ? "DELIVERED" : "NOT DELIVERED");
 #endif
   for (int r = 0; r < 6; r++) {
     mcp.digitalWrite(ROW_PIN[r], LOW);

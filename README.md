@@ -38,14 +38,17 @@ The platform is pinned to `espressif32@6.9.0` and the USB serial flags are set i
 
 ## Running the tests
 
-The tests compile on a PC with g++ (C++17). From the `firmware` folder:
+The tests compile on a PC with g++ (C++17). From the `firmware` folder, run every test for each board (DEVICE_ID 1 to 4):
 
 ```
-g++ -std=c++17 -Istubs -Isrc -o test_main test_main.cpp && ./test_main
+bash run_tests.sh
+```
+
+It prints one line per test and exits non-zero if any test fails. To run one test by hand, for example for board 1:
+
+```
 g++ -std=c++17 -DDEVICE_ID=1 -Istubs -Isrc -o test_comm test_comm.cpp && ./test_comm
 ```
-
-Do the same for `test`, `test_ui` and `test_screen`. `test.cpp` prints results without pass/fail checks, so compare its output with the expected values in its comments.
 
 ## Checking the schematic
 
@@ -59,7 +62,7 @@ It prints PASS or FAIL for each check and exits with a non-zero code if any fail
 
 ## Open items
 
-- The screen is untested. U8g2's SSD1317 driver only supports 96 × 96 panels, so the firmware uses the SSD1306 128 × 64 driver as a stand-in. The panel is 128 × 64, so the stand-in matches its size but not its controller.
+- The screen is untested. U8g2's SSD1317 driver only supports 96 × 96 panels, so the firmware has its own SSD1317 128 × 64 driver (`firmware/src/ssd1317_128x64.h`). The init sequence comes from the datasheet command table, not a vendor sample.
 - The ESP-NOW radio code and the keypad have not run on hardware.
 - `netcheck.py` expects a schematic file called `lora-calculator_jlcpcb_updated.kicad_sch`. The file in this repo is `lora-calculator_jlcpcb.kicad_sch`.
 - The screen connector J2 and the LiPo cable J3 are not in the BOM.

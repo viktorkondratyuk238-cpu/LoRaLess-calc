@@ -1,4 +1,5 @@
 #include "ui.h"
+#include "test_util.h"
 #include <stdio.h>
 using namespace ui;
 
@@ -23,7 +24,7 @@ int main() {
   {
     App a;
     a.handle(Key::COMMA, 0);
-    a.handle(Key::RP, 0); CHECK(a.sel == 1, ") moves down to CALC 2");
+    a.handle(Key::RP, 0); CHECK(a.sel == 1, ") moves down one row");
     a.handle(Key::LP, 0); a.handle(Key::LP, 0); CHECK(a.sel == 3, "( from the top wraps to the last row");
     a.handle(Key::RP, 0); CHECK(a.sel == 0, ") from the last row wraps to ALL");
     CHECK(a.handle(Key::ADD, 0) == Result::IGNORED && a.sel == 0, "+ does nothing on the contacts list");
@@ -32,35 +33,37 @@ int main() {
     CHECK(a.handle(Key::EQ, 0) == Result::HANDLED && a.screen == Screen::CHAT, "= on ALL opens chat");
     CHECK(a.msg.openSlot == comm::ALL_ID, "open chat is ALL");
   }
-  // Contacts row to chat slot mapping
+  // Contacts row to chat slot mapping: row 0 is ALL, then the other boards in number order
   {
-    // board 1: ALL, then CALC 2, CALC 3, CALC 4
-    CHECK(App::slotForRow(0) == 0 && App::slotForRow(1) == 2 && App::slotForRow(3) == 4, "row to slot");
-    CHECK(App::rowForSlot(0) == 0 && App::rowForSlot(2) == 1 && App::rowForSlot(4) == 3, "slot to row");
+    CHECK(App::slotForRow(0) == comm::ALL_ID && App::rowForSlot(comm::ALL_ID) == 0, "ALL is row 0");
+    for (uint8_t k = 0; k < 3; k++) {
+      CHECK(App::slotForRow(k + 1) == peer(k), "row is the k-th other board");
+      CHECK(App::rowForSlot(peer(k)) == k + 1, "other board is at its row");
+    }
   }
   // Unread square shows on contacts, clears when chat opened
   {
     App a;
-    a.onReceive(pkt(3, DEVICE_ID, "hi"), 1000);
-    CHECK(a.rowUnread(App::rowForSlot(3)), "unread on CALC 3 row");
-    CHECK(!a.rowUnread(App::rowForSlot(2)), "no unread on CALC 2 row");
+    a.onReceive(pkt(peer(1), DEVICE_ID, "hi"), 1000);
+    CHECK(a.rowUnread(App::rowForSlot(peer(1))), "unread on that board's row");
+    CHECK(!a.rowUnread(App::rowForSlot(peer(0))), "no unread on the other row");
     a.handle(Key::COMMA, 0);
-    a.sel = App::rowForSlot(3);
+    a.sel = App::rowForSlot(peer(1));
     a.handle(Key::EQ, 0);
-    CHECK(!a.rowUnread(App::rowForSlot(3)), "opening clears unread");
+    CHECK(!a.rowUnread(App::rowForSlot(peer(1))), "opening clears unread");
   }
   // Incoming to ALL while on calc screen: unread on ALL row
   {
     App a;
-    a.onReceive(pkt(2, comm::ALL_ID, "yo"), 1000);
+    a.onReceive(pkt(peer(0), comm::ALL_ID, "yo"), 1000);
     CHECK(a.rowUnread(0), "unread on ALL row");
   }
   // Chat: type, send with double =, message appears in history, packet produced
   {
     App a;
     a.handle(Key::COMMA, 0);
-    a.sel = App::rowForSlot(2);
-    a.handle(Key::EQ, 0);                         // open CALC 2
+    a.sel = App::rowForSlot(peer(0));
+    a.handle(Key::EQ, 0);                         // open the first other board's chat
     uint32_t t = 10000;
     a.handle(Key::K2, t); a.handle(Key::K2, t + 100);   // "A"
     a.handle(Key::K5, t + 2000);                  // "5"
@@ -68,8 +71,8 @@ int main() {
     CHECK(a.handle(Key::EQ, t + 2100) == Result::HANDLED, "first = types =");
     Result r = a.handle(Key::EQ, t + 2200);
     CHECK(r == Result::SEND, "double = sends");
-    CHECK(a.outbox.to == 2 && a.outbox.from == DEVICE_ID && !strcmp(a.outbox.text, "A5"), "packet to CALC 2");
-    CHECK(a.msg.chats[2].n == 1 && !strcmp(a.msg.chats[2].msgs[0].text, "A5"), "sent message in history");
+    CHECK(a.outbox.to == peer(0) && a.outbox.from == DEVICE_ID && !strcmp(a.outbox.text, "A5"), "packet to that board");
+    CHECK(a.msg.chats[peer(0)].n == 1 && !strcmp(a.msg.chats[peer(0)].msgs[0].text, "A5"), "sent message in history");
     CHECK(a.draft.len == 0, "draft cleared after send");
   }
   // Chat: symbols, x2 and sqrt type the special symbols, DEL and C
@@ -103,7 +106,7 @@ int main() {
     a.handle(Key::COMMA, 0); a.handle(Key::EQ, 0);
     CHECK(a.handle(Key::SIGN, 0) == Result::IGNORED, "sign key ignored in a message");
   }
-  // Chat: calculator-only keys ignored
+  // Chat: COMP works, memory keys do not
   {
     App a;
     a.handle(Key::COMMA, 0); a.handle(Key::EQ, 0);
@@ -133,8 +136,8 @@ int main() {
     App a;
     a.handle(Key::COMMA, 0);                           // contacts
     a.sel = 0; a.handle(Key::EQ, 0);                   // open ALL
-    comm::Packet p{}; p.from = 2; p.to = comm::ALL_ID; p.len = 40; memset(p.text, 'x', 40); p.text[40] = 0;
-    for (int i = 0; i < 10; i++) a.onReceive(p, 1000 + i);      // 10 messages x 2 lines = 20 lines
+    comm::Packet p{}; p.from = peer(0); p.to = comm::ALL_ID; p.len = 40; memset(p.text, 'x', 40); p.text[40] = 0;
+    for (int i = 0; i < 10; i++) a.onReceive(p, 1000 + i);      // 10 messages, 6 lines each
     // each incoming bubble is 6 lines (name, top, 3 text lines, bottom); 60 + typing line = 61
     for (int i = 0; i < 60; i++) a.handle(Key::LP, 0);
     CHECK(a.scroll == 55, "scroll stops at top (61 lines - 6 visible)");
@@ -153,9 +156,9 @@ int main() {
   // Receiving while chat is open: stored, no unread
   {
     App a;
-    a.handle(Key::COMMA, 0); a.sel = App::rowForSlot(2); a.handle(Key::EQ, 0);
-    a.onReceive(pkt(2, DEVICE_ID, "ok"), 500);
-    CHECK(!a.rowUnread(1) && a.msg.chats[2].n == 1, "message arrives in open chat, no unread");
+    a.handle(Key::COMMA, 0); a.sel = App::rowForSlot(peer(0)); a.handle(Key::EQ, 0);
+    a.onReceive(pkt(peer(0), DEVICE_ID, "ok"), 500);
+    CHECK(!a.rowUnread(1) && a.msg.chats[peer(0)].n == 1, "message arrives in open chat, no unread");
   }
   printf("%d passed, %d failed\n", passes, fails);
   return fails ? 1 : 0;

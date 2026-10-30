@@ -65,7 +65,7 @@ check("Matrix column nets are named COL_0..COL_4", COL_NETS == [f"COL_{i}" for i
 # Each key: switch pin 1 on a row, switch pin 2 -> diode -> a column. Collect (row, col) per key.
 keys = {}
 for (ref, pin) in list(n.pin_nodes):
-    if ref.startswith("SW") and ref not in ("SW31", "SW32", "SW33") and pin == "1":
+    if ref.startswith("SW") and ref != "SW31" and pin == "1":
         row = net(ref, "1")
         sw2 = net(ref, "2")
         diodes = [k for k in n.pin_nodes if k[0].startswith("D") and k[1] == "1" and net(*k) == sw2]
@@ -86,10 +86,6 @@ check("Every row/column combination is used (6 x 5 = 30)", len(set(pairs)) == 30
 for p in ("6", "7", "8", "27", "28"):
     free, others = only_pin_on_net("U1", p)
     check(f"Unused MCP pin U1.{p} is not connected to any part", free, str(others))
-
-# ---- System buttons (not in the keypad matrix) ----
-check("Reset button SW32 is on ESP32 EN (U4.2)", net("SW32", "2") == net("U4", "2"), net("SW32", "2"))
-check("Boot button SW33 is on ESP32 IO9 (U4.8)", net("SW33", "2") == net("U4", "8"), net("SW33", "2"))
 
 print()
 print(f"{len(failures)} check(s) failed" if failures else "All checks passed")

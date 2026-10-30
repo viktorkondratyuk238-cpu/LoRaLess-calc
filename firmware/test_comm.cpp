@@ -1,4 +1,4 @@
-#include "comm.h"
+#include "test_util.h"
 #include <stdio.h>
 using namespace comm;
 
@@ -176,25 +176,25 @@ int main() {
   // ---- messaging ----
   // Incoming direct message goes to sender's chat and sets unread
   {
-    Messenger m; Packet p{}; p.from = 2; p.to = DEVICE_ID; p.len = 2; memcpy(p.text, "hi", 3);
+    Messenger m; Packet p{}; p.from = peer(0); p.to = DEVICE_ID; p.len = 2; memcpy(p.text, "hi", 3);
     bool ok = m.receive(p, 1000);
-    CHECK(ok && m.chats[2].n == 1 && m.chats[2].unread, "direct message stored and unread");
+    CHECK(ok && m.chats[peer(0)].n == 1 && m.chats[peer(0)].unread, "direct message stored and unread");
     CHECK(m.hasUnread(), "hasUnread true");
-    m.open(2);
-    CHECK(!m.chats[2].unread, "opening clears unread");
+    m.open(peer(0));
+    CHECK(!m.chats[peer(0)].unread, "opening clears unread");
     CHECK(!m.hasUnread(), "hasUnread false after open");
   }
   // Message to ALL goes to the ALL chat
   {
-    Messenger m; Packet p{}; p.from = 3; p.to = ALL_ID; p.len = 3; memcpy(p.text, "yo!", 4);
+    Messenger m; Packet p{}; p.from = peer(1); p.to = ALL_ID; p.len = 3; memcpy(p.text, "yo!", 4);
     m.receive(p, 1000);
     CHECK(m.chats[ALL_ID].n == 1 && m.chats[ALL_ID].unread, "ALL message in ALL chat");
-    CHECK(m.chats[3].n == 0, "ALL message not in sender's direct chat");
+    CHECK(m.chats[peer(1)].n == 0, "ALL message not in sender's direct chat");
   }
   // Message for someone else is ignored
   {
-    Messenger m; Packet p{}; p.from = 2; p.to = 4; p.len = 1; memcpy(p.text, "x", 2);
-    CHECK(!m.receive(p, 1000) && m.chats[2].n == 0, "message for another board ignored");
+    Messenger m; Packet p{}; p.from = peer(0); p.to = peer(1); p.len = 1; memcpy(p.text, "x", 2);
+    CHECK(!m.receive(p, 1000) && m.chats[peer(0)].n == 0, "message for another board ignored");
   }
   // Own echo / bad sender ignored
   {
@@ -206,27 +206,27 @@ int main() {
   // Sending: stores in own chat and fills packet
   {
     Messenger m; Packet out{};
-    bool ok = m.send(3, "hey", 3, 1000, &out);
-    CHECK(ok && out.from == DEVICE_ID && out.to == 3 && !strcmp(out.text, "hey"), "send fills packet");
-    CHECK(m.chats[3].n == 1 && m.chats[3].msgs[0].from == DEVICE_ID, "sent message stored as mine");
+    bool ok = m.send(peer(1), "hey", 3, 1000, &out);
+    CHECK(ok && out.from == DEVICE_ID && out.to == peer(1) && !strcmp(out.text, "hey"), "send fills packet");
+    CHECK(m.chats[peer(1)].n == 1 && m.chats[peer(1)].msgs[0].from == DEVICE_ID, "sent message stored as mine");
     CHECK(!m.send(DEVICE_ID, "x", 1, 1000, &out), "cannot send to self");
     CHECK(!m.send(ALL_ID, "", 0, 1000, &out), "empty send rejected");
   }
   // Messages older than 60 min are dropped
   {
-    Messenger m; Packet p{}; p.from = 2; p.to = DEVICE_ID; p.len = 1; memcpy(p.text, "a", 2);
+    Messenger m; Packet p{}; p.from = peer(0); p.to = DEVICE_ID; p.len = 1; memcpy(p.text, "a", 2);
     m.receive(p, 0);
     p.len = 1; memcpy(p.text, "b", 2);
     uint32_t later = MSG_TTL_MS + 5000;
     m.receive(p, later);
-    CHECK(m.chats[2].n == 1 && m.chats[2].msgs[0].text[0] == 'b', "old message dropped after 60 min");
+    CHECK(m.chats[peer(0)].n == 1 && m.chats[peer(0)].msgs[0].text[0] == 'b', "old message dropped after 60 min");
   }
   // Only 30 per chat: oldest dropped
   {
-    Messenger m; Packet p{}; p.from = 4; p.to = DEVICE_ID; p.len = 1;
+    Messenger m; Packet p{}; p.from = peer(2); p.to = DEVICE_ID; p.len = 1;
     for (int i = 0; i < 35; i++) { p.text[0] = (char)('a' + i % 26); p.text[1] = 0; m.receive(p, 1000 + i); }
-    CHECK(m.chats[4].n == MAX_CHAT_MSGS, "chat holds at most 30");
-    CHECK(m.chats[4].msgs[0].text[0] == (char)('a' + 5), "oldest 5 dropped");
+    CHECK(m.chats[peer(2)].n == MAX_CHAT_MSGS, "chat holds at most 30");
+    CHECK(m.chats[peer(2)].msgs[0].text[0] == (char)('a' + 5), "oldest 5 dropped");
   }
 
   printf("\n%d passed, %d failed\n", passes, fails);

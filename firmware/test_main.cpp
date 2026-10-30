@@ -1,10 +1,13 @@
 #include "main.cpp"
+#include "test_util.h"
 #include <stdio.h>
 static int fails = 0, passes = 0;
 static const char* buildExprForTest() { static char b[160]; buildExpr(b, sizeof b); return b; }
 #define CHECK(cond, what) do { if (cond) passes++; else { fails++; printf("FAIL: %s\n", what); } } while (0)
 
 int main() {
+  Serial.silent = true;      // the calculator prints its screen to serial; keep that out of the test output
+
   // Calculator still works through the new routing
   {
     app = ui::App();
@@ -37,7 +40,7 @@ int main() {
   // Incoming message while on calculator: unread square set, no screen change
   {
     app = ui::App();
-    comm::Packet p{}; p.from = 2; p.to = comm::ALL_ID; p.len = 2; memcpy(p.text, "yo", 3);
+    comm::Packet p{}; p.from = peer(0); p.to = comm::ALL_ID; p.len = 2; memcpy(p.text, "yo", 3);
     onRadioPacket(p);
     CHECK(app.rowUnread(0) && app.screen == ui::Screen::CALC, "incoming marks ALL unread, stays on calc");
   }
@@ -60,8 +63,8 @@ int main() {
     clearCalc();
     onKey(K_1); onKey(K_DIV); onKey(K_0); onKey(K_EQ);
     CHECK(gErr, "division by zero sets error");
-    char text[64] = "";
-    if (gErr) strcpy(text, "Syntax error");
+    char text[64];
+    calcText(text, sizeof text);
     CHECK(!strcmp(text, "Syntax error"), "error text is Syntax error");
   }
   // Keypad layout matches the agreed layout
@@ -74,17 +77,20 @@ int main() {
     CHECK(KEYMAP[5][3] == K_ADD && KEYMAP[5][4] == K_SUB, "row 6: + and -");
     CHECK(KEYMAP[3][3] == K_LP && KEYMAP[3][4] == K_RP, "row 4: brackets unchanged");
   }
-  // The unused expander pins are driven low in setup, so they never float
+  // The unused expander pins are driven low in setup, so they never float.
+  // These are the pins check_board.py expects to be unconnected: U1.27, 28, 6, 7, 8.
   {
-    // stubs record nothing, so check the pin list directly
-    static const uint8_t UNUSED_CHECK[5] = {6, 7, 13, 14, 15};
-    bool allPortPins = true;
-    for (uint8_t p : UNUSED_CHECK) if (p > 15) allPortPins = false;
-    CHECK(allPortPins, "unused pins are valid expander pins");
+    const uint8_t expected[5] = {6, 7, 13, 14, 15};
+    bool same = true;
+    for (int i = 0; i < 5; i++) if (UNUSED_PIN[i] != expected[i]) same = false;
+    CHECK(same, "unused pins are GPA6, GPA7, GPB5, GPB6, GPB7");
     bool noOverlap = true;
-    for (uint8_t p : UNUSED_CHECK) for (int r = 0; r < 6; r++) if (ROW_PIN[r] == p) noOverlap = false;
-    for (uint8_t p : UNUSED_CHECK) for (int c = 0; c < 5; c++) if (COL_PIN[c] == p) noOverlap = false;
-    CHECK(noOverlap, "unused pins do not overlap rows or columns");
+    for (uint8_t p : UNUSED_PIN) {
+      if (p > 15) noOverlap = false;
+      for (int r = 0; r < 6; r++) if (ROW_PIN[r] == p) noOverlap = false;
+      for (int c = 0; c < 5; c++) if (COL_PIN[c] == p) noOverlap = false;
+    }
+    CHECK(noOverlap, "unused pins are valid and do not overlap rows or columns");
   }
   printf("%d passed, %d failed\n", passes, fails);
   return fails ? 1 : 0;
