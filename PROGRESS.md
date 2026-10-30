@@ -35,7 +35,7 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
 
 ### Screen
 - The screen is a 1.54-inch 128x64 panel with an SSD1317 controller (I2C). U8g2's SSD1317 driver only supports 96x96 panels, so there is no matching driver.
-- `firmware/src/display_hw.h` uses the SSD1306 128x64 driver as a stand-in. The code and README both say this is unverified.
+- `firmware/src/ssd1317_128x64.h` is our SSD1317 128x64 driver, copied from U8g2's 96x96 SSD1317 driver with the init changed for 128x64. It builds for calc1. The init is from the datasheet command table (Rev 1.2) but is unverified on the screen.
 
 ### Tools installed on this PC (outside the project)
 - Python 3.12.10
@@ -46,7 +46,7 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
 ## What is still to do
 
 ### Firmware
-- **Display:** the screen is untested. The panel is 128x64 and the controller is SSD1317, but U8g2 has no SSD1317 driver for that size. Either write an SSD1317 128x64 driver or test whether the SSD1306 stand-in works. If the screen stays blank or the image is wrong, change the constructor in `display_hw.h`.
+- **Display:** the screen is untested. If it stays blank or the image is wrong, check the init sequence in `firmware/src/ssd1317_128x64.h` (segment/COM remap and COM pin config are the likely ones).
 - **Fonts:** logisoso62 is not confirmed, so the 1-row size uses logisoso38.
 - **Character widths:** `CALC_LEVELS`, `COLS` and `BUBBLE_TEXT` are placeholders until measured on the real screen.
 - **Chat bubbles:** still ASCII edges. Rounded boxes are not done.

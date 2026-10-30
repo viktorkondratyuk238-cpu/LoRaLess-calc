@@ -32,7 +32,7 @@ Tools:
 Open items (need the hardware or a PlatformIO build):
   - Display font names: logisoso62 is not confirmed, so the 1-row size uses logisoso38.
   - Display controller: the screen is a 128x64 panel with an SSD1317 controller (I2C). U8g2 only has
-    an SSD1317 driver for 96x96 panels, so display_hw.h uses the SSD1306 128x64 driver as a stand-in.
+    an SSD1317 driver for 96x96 panels, so ssd1317_128x64.h has its own 128x64 driver (untested).
     Not verified on the screen; change one line if it fails.
   - Chat bubbles use ASCII edges for now (rounded boxes later).
   - Character widths (CALC_LEVELS, COLS, BUBBLE_TEXT) are placeholders until measured.
