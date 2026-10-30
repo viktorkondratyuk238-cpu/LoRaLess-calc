@@ -21,7 +21,7 @@ A handheld calculator built around an ESP32-C3. It has a keypad, a small OLED sc
 
 - **MCU:** ESP32-C3-WROOM-02U module
 - **Keypad:** 30 keys in a 6 × 5 matrix, read through an MCP23017 I/O expander at I2C address 0x20
-- **Screen:** 1.54-inch OLED with an SSD1317 controller, connected over I2C (header J2: GND, VCC, SCL, SDA). Panel size to be confirmed (128 × 64 or 96 × 96)
+- **Screen:** 1.54-inch 128 × 64 OLED with an SSD1317 controller, connected over I2C (header J2: GND, VCC, SCL, SDA)
 - **Power:** USB-C input, MCP73831 battery charger, AP2112K-3.3 regulator, LiPo cable (J3)
 - **Extra buttons:** SW32 is reset, SW33 is boot. SW31 is a power switch.
 
@@ -59,7 +59,7 @@ It prints PASS or FAIL for each check and exits with a non-zero code if any fail
 
 ## Open items
 
-- The screen is untested. U8g2's SSD1317 driver only supports 96 × 96 panels, so the firmware uses the SSD1306 128 × 64 driver as a stand-in. The panel size needs confirming.
+- The screen is untested. U8g2's SSD1317 driver only supports 96 × 96 panels, so the firmware uses the SSD1306 128 × 64 driver as a stand-in. The panel is 128 × 64, so the stand-in matches its size but not its controller.
 - The ESP-NOW radio code and the keypad have not run on hardware.
 - `netcheck.py` expects a schematic file called `lora-calculator_jlcpcb_updated.kicad_sch`. The file in this repo is `lora-calculator_jlcpcb.kicad_sch`.
 - The screen connector J2 and the LiPo cable J3 are not in the BOM.
