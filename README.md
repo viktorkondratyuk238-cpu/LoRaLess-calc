@@ -29,7 +29,7 @@ A handheld calculator built around an ESP32-C3. It has a keypad, a small OLED sc
 
 Layout (row 1 at top, column 1 at left; from `KEYMAP` in `firmware/src/main.cpp`):
 
-| Row   | Col 1| Col 2 | Col 3 | Col 4 | Col 5 |
+|| Col 1| Col 2 | Col 3 | Col 4 | Col 5 |
 |---|---|---|---|---|---|
 | Row 1 | C | DEL | +/- | MEMW | COMMA |
 | Row 2 | x² | SQRT | ^ | MR | MC |
