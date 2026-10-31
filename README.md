@@ -25,6 +25,14 @@ A handheld calculator built around an ESP32-C3. It has a keypad, a small OLED sc
 - **Power:** USB-C input, MCP73831 battery charger, AP2112K-3.3 regulator, LiPo cable (J3)
 - **Extra button:** SW31 is a power switch.
 
+### Parts not in the PCB BOM
+
+These are not in `bom_jlcpcb.csv` and must be sourced separately:
+
+- **Screen:** 1.54-inch 128 × 64 OLED (SSD1317), I2C, connected to header J2 (GND, VCC, SCL, SDA).
+- **Battery:** 500 mAh 1S LiPo (3.7 V nominal), connected to the LiPo cable header J3. The MCP73831 charger on the board charges it over USB-C.
+- **Antenna:** 2.4 GHz T-style omnidirectional antenna, 40 mm version (the listing also has a 90 mm version), on a short coax pigtail with a small IPX1 / U.FL-type connector. It is sold for ELRS/TBS receivers. Connect it to the ESP32-C3-WROOM-02U module's external antenna pad (the "U" variant has a U.FL connector for this).
+
 ## Keys
 
 Layout (row 1 at top, column 1 at left; from `KEYMAP` in `firmware/src/main.cpp`):
@@ -110,7 +118,6 @@ It prints PASS or FAIL for each check and exits with a non-zero code if any fail
 
 - The screen is untested. U8g2's SSD1317 driver only supports 96 × 96 panels, so the firmware has its own SSD1317 128 × 64 driver (`firmware/src/ssd1317_128x64.h`). The init sequence comes from the datasheet command table, not a vendor sample.
 - The ESP-NOW radio code and the keypad have not run on hardware.
-- `netcheck.py` expects a schematic file called `lora-calculator_jlcpcb_updated.kicad_sch`. The file in this repo is `lora-calculator_jlcpcb.kicad_sch`.
-- The screen connector J2 and the LiPo cable J3 are not in the BOM.
+- The screen connector J2 and the LiPo cable J3 are not in the BOM (see [Parts not in the PCB BOM](#parts-not-in-the-pcb-bom)).
 
 Full list: [PROGRESS.md](PROGRESS.md).
