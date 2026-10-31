@@ -1,7 +1,7 @@
 import re, math, sys
 from collections import defaultdict
 
-src = open('lora-calculator_jlcpcb_updated.kicad_sch', encoding='utf-8').read()
+src = open('lora-calculator_jlcpcb.kicad_sch', encoding='utf-8').read()
 
 # ---- tiny s-expression parser ----
 def parse(s):

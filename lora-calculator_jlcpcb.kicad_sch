@@ -1,6 +1,4 @@
 (kicad_sch
-	
-	
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
@@ -5513,6 +5511,12 @@
 		(uuid "0a21d2f4-1f68-4b26-8f28-e0db1b42ee6a")
 	)
 	(junction
+		(at 182.88 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "132827c6-9135-4816-925f-ab056102803b")
+	)
+	(junction
 		(at 88.9 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5567,6 +5571,12 @@
 		(uuid "2db5b1aa-1378-4798-b989-1cf6c875986e")
 	)
 	(junction
+		(at 167.64 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2f4d8976-522b-4da5-b6c0-b96ea38640e5")
+	)
+	(junction
 		(at 44.45 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5589,6 +5599,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3cb0c71c-fe2b-4e07-a05f-4b36b014b25a")
+	)
+	(junction
+		(at 163.83 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "41eb652d-8cb6-4755-9858-cf2eb26a30aa")
 	)
 	(junction
 		(at 113.03 66.04)
@@ -5908,6 +5924,82 @@
 		(color 0 0 0 0)
 		(uuid "fb050150-aa99-41f9-8043-8b179007ed09")
 	)
+	(no_connect
+		(at 170.18 45.72)
+		(uuid "0b09ca83-6340-4ee3-ae69-7c25e038b22a")
+	)
+	(no_connect
+		(at 185.42 124.46)
+		(uuid "0d04b310-aff1-4fbf-b99c-8d6c1e849737")
+	)
+	(no_connect
+		(at 195.58 45.72)
+		(uuid "0d3086ac-fde4-4295-b4dd-89187a32e2d3")
+	)
+	(no_connect
+		(at 149.86 182.88)
+		(uuid "25effff2-a061-4b7c-ad36-555e3a06beb6")
+	)
+	(no_connect
+		(at 195.58 66.04)
+		(uuid "30de55d5-e565-4aec-a69d-7485323a560f")
+	)
+	(no_connect
+		(at 215.9 114.3)
+		(uuid "3ba51539-69f9-4834-ae8d-30a19d0c1502")
+	)
+	(no_connect
+		(at 185.42 119.38)
+		(uuid "4697caab-02e4-4d31-b54d-afeaf15840f1")
+	)
+	(no_connect
+		(at 185.42 142.24)
+		(uuid "4ae48c86-fbb4-4b89-b3a5-3488db7ee915")
+	)
+	(no_connect
+		(at 81.28 167.64)
+		(uuid "6e91dd3e-dafe-40e2-a77e-31c196b2b60a")
+	)
+	(no_connect
+		(at 104.14 185.42)
+		(uuid "8dd84ab3-c4e8-41f0-8177-e954578d3690")
+	)
+	(no_connect
+		(at 215.9 111.76)
+		(uuid "a243fc7c-ba23-4361-b8dd-0293362bd0d6")
+	)
+	(no_connect
+		(at 195.58 68.58)
+		(uuid "a28f4c12-e0b3-402c-8f10-fc1510b9c707")
+	)
+	(no_connect
+		(at 185.42 116.84)
+		(uuid "b3686c6f-af44-4399-a823-b5bb271fd524")
+	)
+	(no_connect
+		(at 195.58 48.26)
+		(uuid "baa2e1b4-8d92-4f87-9453-7aeb0c7a92ad")
+	)
+	(no_connect
+		(at 170.18 48.26)
+		(uuid "bc156c8e-66d0-40de-aa57-0c334babaa60")
+	)
+	(no_connect
+		(at 149.86 185.42)
+		(uuid "cae17d39-f523-4932-9a8c-00756417bb4e")
+	)
+	(no_connect
+		(at 185.42 132.08)
+		(uuid "db0b80e7-8520-4634-baa4-7bc7baa8af11")
+	)
+	(no_connect
+		(at 195.58 71.12)
+		(uuid "e3de5532-60ed-4824-ae97-19aae5844f10")
+	)
+	(no_connect
+		(at 185.42 134.62)
+		(uuid "f3b64fca-7d52-470b-b6dc-d05dae6a2ec3")
+	)
 	(wire
 		(pts
 			(xy 91.44 77.47) (xy 115.57 77.47)
@@ -5990,6 +6082,16 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 137.16) (xy 156.21 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09caba83-8cd8-47aa-a84b-a79ec1c76b6f")
+	)
+	(wire
+		(pts
 			(xy 44.45 25.4) (xy 44.45 26.67)
 		)
 		(stroke
@@ -6030,6 +6132,16 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 147.32) (xy 182.88 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fd09ea5-19da-4cec-af2a-48bcdf47e506")
+	)
+	(wire
+		(pts
 			(xy 195.58 60.96) (xy 214.63 60.96)
 		)
 		(stroke
@@ -6047,6 +6159,16 @@
 			(type default)
 		)
 		(uuid "15e3ae0a-fd15-45cf-b4d1-eae4d1bb0006")
+	)
+	(wire
+		(pts
+			(xy 185.42 144.78) (xy 182.88 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16402bb4-2eeb-44a0-87f2-2168418bcc58")
 	)
 	(wire
 		(pts
@@ -6167,16 +6289,6 @@
 			(type default)
 		)
 		(uuid "22da189f-bbb1-4805-beb7-cf40ab548e4c")
-	)
-	(wire
-		(pts
-			(xy 115.57 107.95) (xy 115.57 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea5880cd-a4a1-4753-9c4e-66a6e4c49307")
 	)
 	(wire
 		(pts
@@ -7210,6 +7322,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 97.79) (xy 177.8 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "929237ca-8f02-46f0-83fe-f3c6ac62fa32")
+	)
+	(wire
+		(pts
 			(xy 101.6 55.88) (xy 105.41 55.88)
 		)
 		(stroke
@@ -7240,6 +7362,16 @@
 	)
 	(wire
 		(pts
+			(xy 163.83 129.54) (xy 185.42 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ad707bf-2247-4646-bb3a-bed9733e8b08")
+	)
+	(wire
+		(pts
 			(xy 19.05 36.83) (xy 20.32 36.83)
 		)
 		(stroke
@@ -7247,6 +7379,16 @@
 			(type default)
 		)
 		(uuid "9e08d332-f274-47b4-8a13-00455b912402")
+	)
+	(wire
+		(pts
+			(xy 185.42 121.92) (xy 180.34 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e925fcf-ac1b-405c-a97f-16d1cc40b271")
 	)
 	(wire
 		(pts
@@ -7380,6 +7522,16 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 127) (xy 185.42 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a883b7b8-82ac-4386-819d-55998fa64b48")
+	)
+	(wire
+		(pts
 			(xy 115.57 67.31) (xy 115.57 66.04)
 		)
 		(stroke
@@ -7437,6 +7589,16 @@
 			(type default)
 		)
 		(uuid "ac2a3f47-f0bd-452d-941a-4977700650f3")
+	)
+	(wire
+		(pts
+			(xy 167.64 115.57) (xy 167.64 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac9d33b6-709d-4523-acb3-7ce43e7f73f0")
 	)
 	(wire
 		(pts
@@ -7527,6 +7689,16 @@
 			(type default)
 		)
 		(uuid "b9067d34-4250-43f9-9bc1-e93f1435564d")
+	)
+	(wire
+		(pts
+			(xy 185.42 111.76) (xy 182.88 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beea2ce4-e6cd-4ebf-ae0e-5a77787b1782")
 	)
 	(wire
 		(pts
@@ -7860,6 +8032,16 @@
 	)
 	(wire
 		(pts
+			(xy 163.83 118.11) (xy 163.83 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6273602-28ce-4928-960a-f37615b6e32b")
+	)
+	(wire
+		(pts
 			(xy 44.45 45.72) (xy 44.45 46.99)
 		)
 		(stroke
@@ -7940,6 +8122,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 111.76) (xy 182.88 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e37ccf6f-d936-4cc9-8d6a-77dc59a21ae1")
+	)
+	(wire
+		(pts
 			(xy 48.26 168.91) (xy 48.26 171.45)
 		)
 		(stroke
@@ -7977,6 +8169,16 @@
 			(type default)
 		)
 		(uuid "e63ade6c-7f0b-412e-9378-2c5784dfdf2d")
+	)
+	(wire
+		(pts
+			(xy 115.57 107.95) (xy 115.57 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea5880cd-a4a1-4753-9c4e-66a6e4c49307")
 	)
 	(wire
 		(pts
@@ -8188,6 +8390,16 @@
 		)
 		(uuid "0e7f2f8d-1024-4cc4-a384-5d580daafa08")
 	)
+	(label "D-"
+		(at 182.88 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1150a57c-3952-4d04-b880-edb87a1108b3")
+	)
 	(label "COL_1"
 		(at 66.04 34.29 0)
 		(effects
@@ -8207,6 +8419,16 @@
 			(justify left bottom)
 		)
 		(uuid "356f44f4-5d24-443b-89ec-dc470dab57e0")
+	)
+	(label "D+"
+		(at 182.88 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "37daa4ec-7469-4379-802b-a65f0d24ef92")
 	)
 	(label "D+"
 		(at 152.4 175.26 0)
@@ -8400,7 +8622,7 @@
 			(uuid "972543cd-d32d-4b2e-9769-775ea6a784c4")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "U5")
 					(unit 1)
@@ -8513,7 +8735,7 @@
 			(uuid "727a7741-6864-4a32-a213-f306038a3362")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D21")
 					(unit 1)
@@ -8591,7 +8813,7 @@
 			(uuid "41a1162b-9e44-4805-bf7d-cb2ebdb826bc")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR04")
 					(unit 1)
@@ -8682,7 +8904,7 @@
 			(uuid "004527b3-f41e-4c8d-ad0d-41de3ea60594")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "R2")
 					(unit 1)
@@ -8761,9 +8983,102 @@
 			(uuid "6ae56319-6efd-4e8b-90e9-58a7934bd34c")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 156.21 133.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0993571b-7546-4411-a552-5e6b5a6de89e")
+		(property "Reference" "R10"
+			(at 158.75 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 158.75 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 154.43 133.35 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 156.21 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 156.21 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "23e22cb7-e7f6-44f2-92e8-f629e60330f5")
+		)
+		(pin "1"
+			(uuid "9cd36d33-fd49-46f7-bbc1-8616d6aee722")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -8874,7 +9189,7 @@
 			(uuid "ceabbc6a-ba4a-4bde-91fe-cd0db54ee867")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D6")
 					(unit 1)
@@ -9047,9 +9362,102 @@
 			(uuid "c87c1725-6e95-49ef-8d6a-8a7ecebe1d95")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 208.28 99.06 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e0d9410-4d77-455c-b521-a077d07dd981")
+		(property "Reference" "C7"
+			(at 212.09 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 212.09 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 209.25 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 208.28 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C15850"
+			(at 208.28 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d8db6c4a-77ac-428c-921f-478c72cce15a")
+		)
+		(pin "1"
+			(uuid "26189e71-34f2-4305-9c17-553afeffc7a0")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -9138,7 +9546,7 @@
 			(uuid "a447b97b-7b69-405a-a3cb-2afdbea58154")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW5")
 					(unit 1)
@@ -9229,7 +9637,7 @@
 			(uuid "5f5d43e2-7b08-4bd5-ba3a-667733839718")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW22")
 					(unit 1)
@@ -9342,7 +9750,7 @@
 			(uuid "1c0a5107-93e0-4b0c-b74c-7f5d0ec892fe")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D10")
 					(unit 1)
@@ -9455,7 +9863,7 @@
 			(uuid "a37c8dc9-d895-4fdc-836d-bdd43f19e01f")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D23")
 					(unit 1)
@@ -9546,7 +9954,7 @@
 			(uuid "520cdb7b-14fe-4849-876b-162e0d62f94a")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW16")
 					(unit 1)
@@ -9637,7 +10045,7 @@
 			(uuid "7e7a3f03-10c8-4246-8989-97035d678bb7")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW24")
 					(unit 1)
@@ -9730,9 +10138,88 @@
 			(uuid "3c3e5279-0584-4b70-bad0-ed3438565ed7")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 208.28 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2501d222-b58f-4abb-bf5f-33cdaa005ee0")
+		(property "Reference" "#PWR066"
+			(at 208.28 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 208.28 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 208.28 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "38add05c-b073-414c-b7a1-834a1f9c98b8")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "#PWR066")
 					(unit 1)
 				)
 			)
@@ -9843,7 +10330,7 @@
 			(uuid "75a80e2f-3cdf-4d1e-b8a9-8249fcc82250")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D30")
 					(unit 1)
@@ -9934,7 +10421,7 @@
 			(uuid "d192c505-3985-4278-8a7c-809f06aad1a1")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW8")
 					(unit 1)
@@ -10025,7 +10512,7 @@
 			(uuid "bc46a243-3f59-479e-a09c-ccbe9b1bf00d")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW11")
 					(unit 1)
@@ -10103,7 +10590,7 @@
 			(uuid "9aa439b6-8de9-4a48-8bb3-7bfda5b41e23")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR033")
 					(unit 1)
@@ -10194,7 +10681,7 @@
 			(uuid "314f20b6-4ba2-47c1-b4a5-0154232676d3")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW9")
 					(unit 1)
@@ -10285,7 +10772,7 @@
 			(uuid "00c6e705-2dea-45fc-bbc0-dc183604ad76")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW14")
 					(unit 1)
@@ -10363,7 +10850,7 @@
 			(uuid "8a847256-64d2-4c10-94c9-46a29073d10c")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR011")
 					(unit 1)
@@ -10476,9 +10963,181 @@
 			(uuid "763e9954-f7be-4acf-a265-be968157ce46")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 193.04 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3502194b-d28a-4270-a240-5352c25e4208")
+		(property "Reference" "#PWR064"
+			(at 193.04 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 193.04 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 193.04 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 193.04 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0735ee5e-bc5b-403e-acee-4eacec7f61cd")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "#PWR064")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 180.34 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "38fdd4a4-bc3a-4ee6-bcd2-6d7d219c28f1")
+		(property "Reference" "R9"
+			(at 182.88 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 182.88 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 178.56 118.11 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 180.34 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 180.34 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "65ca39f2-edff-4a7d-825f-a9ff9844a49d")
+		)
+		(pin "1"
+			(uuid "59c0d12d-c46a-483f-a316-f1aafa1ced3a")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -10567,7 +11226,7 @@
 			(uuid "9e250d03-0f3b-42cc-8b79-6545bf202e5e")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW10")
 					(unit 1)
@@ -10658,9 +11317,87 @@
 			(uuid "24b2d207-62cc-4b85-847d-a7c102a5c6ed")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 200.66 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "50147743-a611-4162-ac8d-7ad767d8c54a")
+		(property "Reference" "#PWR061"
+			(at 200.66 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 200.66 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 200.66 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "74722462-5f89-4b07-a1f1-3c0d49d6b89b")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -10751,9 +11488,87 @@
 			(uuid "23be7116-104d-46c3-b8ac-01cf9ef51cc7")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 180.34 114.3 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "518c04f0-ee15-4844-8dd9-4df52bf228ca")
+		(property "Reference" "#PWR070"
+			(at 180.34 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 180.34 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 180.34 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 180.34 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6f79f769-ac9f-4664-9c5b-f51fbca08d52")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -10842,7 +11657,7 @@
 			(uuid "fb0a32ac-0d41-4ffa-8230-9ff7ff80a16f")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW15")
 					(unit 1)
@@ -10920,7 +11735,7 @@
 			(uuid "0abe2e6d-28c6-49f4-b8cd-3a9cfb515a29")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR036")
 					(unit 1)
@@ -11033,7 +11848,7 @@
 			(uuid "7d0b7651-6dff-4a92-837d-f24c4b1c0bc3")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D2")
 					(unit 1)
@@ -11146,7 +11961,7 @@
 			(uuid "aabaf849-7eca-469c-a338-746f66413263")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D1")
 					(unit 1)
@@ -11259,7 +12074,7 @@
 			(uuid "ee2d368b-d355-41ea-8d51-a08e0b65e871")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D9")
 					(unit 1)
@@ -11350,7 +12165,7 @@
 			(uuid "3a60037b-c413-4e57-95b8-fbf1601f53ff")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW20")
 					(unit 1)
@@ -11463,7 +12278,7 @@
 			(uuid "33c3e6a8-0d10-4617-ab35-88c53212d151")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D12")
 					(unit 1)
@@ -11541,7 +12356,7 @@
 			(uuid "9b91223f-5324-4360-85eb-86f5b2c87b21")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR05")
 					(unit 1)
@@ -11654,7 +12469,7 @@
 			(uuid "70e45e6c-0343-455b-8236-e6eaf4405c02")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D3")
 					(unit 1)
@@ -11767,7 +12582,7 @@
 			(uuid "7acb9559-547f-4af8-a9e5-17c06abd88e6")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D7")
 					(unit 1)
@@ -11845,7 +12660,7 @@
 			(uuid "706ace7d-3116-4525-8b20-3bfafb4b639f")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR034")
 					(unit 1)
@@ -11936,7 +12751,7 @@
 			(uuid "00be38f6-d67e-4fba-98f9-7958ea02ef25")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "R3")
 					(unit 1)
@@ -12027,7 +12842,7 @@
 			(uuid "9a556271-d307-4d1f-acc1-89fc0eb80323")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW26")
 					(unit 1)
@@ -12118,9 +12933,102 @@
 			(uuid "c7d59ba0-7df4-4644-a2fd-41e8d215d94a")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 182.88 93.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6e5a1b53-ca0f-4657-a27f-f38ddd71f170")
+		(property "Reference" "R8"
+			(at 185.42 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 185.42 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 181.1 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 182.88 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 182.88 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "92a1844f-9ec7-42fd-ba05-e9ffa4477554")
+		)
+		(pin "1"
+			(uuid "5d5d9e51-9e8b-45c2-848c-cf80c1ed3dad")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -12221,7 +13129,7 @@
 			(uuid "997b4ba8-c9c2-4173-b6f6-816474ab3af6")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "U3")
 					(unit 1)
@@ -12334,7 +13242,7 @@
 			(uuid "d852f704-6b43-4f9d-8695-1cf751f8669f")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D29")
 					(unit 1)
@@ -12425,7 +13333,7 @@
 			(uuid "615c7677-dd12-4980-82bf-642564e2778b")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW2")
 					(unit 1)
@@ -12538,7 +13446,7 @@
 			(uuid "d8893888-2e63-4fd3-9f62-6156c3fc1aad")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D4")
 					(unit 1)
@@ -12629,7 +13537,7 @@
 			(uuid "6b2dddf8-2899-4343-bb31-cc29899a8dc6")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW12")
 					(unit 1)
@@ -12720,7 +13628,7 @@
 			(uuid "acd09004-383e-4866-9fc0-ae043098c00b")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW25")
 					(unit 1)
@@ -12813,7 +13721,7 @@
 			(uuid "6fd0af10-940a-46bd-9e83-d48649ca5841")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "C1")
 					(unit 1)
@@ -12904,7 +13812,7 @@
 			(uuid "c3a031e7-b4f0-495f-a6df-d1f859760c68")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW28")
 					(unit 1)
@@ -13017,7 +13925,7 @@
 			(uuid "4408f00a-ce92-47b6-bfa0-4fbed89f6723")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D11")
 					(unit 1)
@@ -13130,7 +14038,7 @@
 			(uuid "7649cb19-765e-4d6d-9441-0258edbea633")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D22")
 					(unit 1)
@@ -13221,7 +14129,7 @@
 			(uuid "e11cc98b-95c7-4fe1-adbb-3ffa475d4929")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW13")
 					(unit 1)
@@ -13334,7 +14242,7 @@
 			(uuid "47938625-3a9c-42e0-9f4f-eb933ed62b2a")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D14")
 					(unit 1)
@@ -13447,9 +14355,165 @@
 			(uuid "0488ec1a-bc8e-4df9-bfbb-21557886f0f5")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 182.88 90.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "95026e73-e10f-428b-90b0-ea83945aabb2")
+		(property "Reference" "#PWR067"
+			(at 182.88 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 182.88 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 182.88 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b9fbc8ce-713c-4935-a339-c2d095961bb0")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "#PWR067")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 208.28 95.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "958391c0-aa85-400b-8aa7-ef3bb4f36aac")
+		(property "Reference" "#PWR065"
+			(at 208.28 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 208.28 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 208.28 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fa622798-61ee-4879-bde2-24605ffe5a03")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "#PWR065")
 					(unit 1)
 				)
 			)
@@ -13538,9 +14602,87 @@
 			(uuid "a481a20c-dcb3-4cce-a0c4-3d0afb0b3090")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 193.04 95.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9e3d18bd-828d-4387-9f17-e566877c701a")
+		(property "Reference" "#PWR063"
+			(at 193.04 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 193.04 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 193.04 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 193.04 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2fefe86b-becc-4bdc-a845-7fa556347077")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -13616,7 +14758,7 @@
 			(uuid "21fda6c8-f6b2-4668-96a4-e8b447dd1ba1")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR03")
 					(unit 1)
@@ -13709,7 +14851,7 @@
 			(uuid "4745ab5b-5dec-447e-85f4-09ad6bd9c07c")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "R6")
 					(unit 1)
@@ -13800,7 +14942,7 @@
 			(uuid "d21fcbb9-93a2-4fc3-9b52-3d05adbf85ec")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW7")
 					(unit 1)
@@ -13913,7 +15055,7 @@
 			(uuid "2104f001-0c47-41e7-8f50-9cd740fa5ba1")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D16")
 					(unit 1)
@@ -13992,7 +15134,7 @@
 			(uuid "f892050c-3d6f-4db3-848a-c91603647832")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR035")
 					(unit 1)
@@ -14085,7 +15227,7 @@
 			(uuid "b508e991-c5c3-4587-b26c-dfd531bb7ec7")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "J3")
 					(unit 1)
@@ -14198,7 +15340,7 @@
 			(uuid "923dc65a-1492-4ea9-99e6-e9234388ff6e")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D18")
 					(unit 1)
@@ -14276,7 +15418,7 @@
 			(uuid "95780158-672a-4143-9ef7-8a20f6f3d581")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR09")
 					(unit 1)
@@ -14354,7 +15496,7 @@
 			(uuid "24c0218e-2a08-42e7-8f10-7623d1fa4f3c")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR06")
 					(unit 1)
@@ -14447,7 +15589,7 @@
 			(uuid "2d2e12d5-9fbc-4c7a-a849-3e8d2cdd439f")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "R7")
 					(unit 1)
@@ -14538,7 +15680,7 @@
 			(uuid "eab3465d-ba31-4c4b-92ef-608465183d4b")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "R1")
 					(unit 1)
@@ -14616,7 +15758,7 @@
 			(uuid "297850fb-24f3-4e09-b9be-aa328d6dbe79")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR012")
 					(unit 1)
@@ -14707,7 +15849,7 @@
 			(uuid "08dfec24-2afc-43c6-8833-4c468318714e")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW18")
 					(unit 1)
@@ -14798,9 +15940,88 @@
 			(uuid "2c9d1065-46cb-4866-8d1b-49e740c81f29")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 200.66 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdbd9e07-d50d-4aa6-a296-f18c8bd339ce")
+		(property "Reference" "#PWR062"
+			(at 200.66 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 200.66 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 200.66 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7581a94d-2ff2-4296-b46e-d3ec1250a7a4")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -14889,7 +16110,7 @@
 			(uuid "82033bba-72ce-4680-a92c-ee0fb3baab8c")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW29")
 					(unit 1)
@@ -14980,7 +16201,7 @@
 			(uuid "275495c8-ce4e-47cc-9cb9-67f60860eb4c")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW27")
 					(unit 1)
@@ -15093,7 +16314,7 @@
 			(uuid "9c3ce955-b4cd-4298-99d4-36de89e721b2")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D19")
 					(unit 1)
@@ -15184,7 +16405,7 @@
 			(uuid "cfdb548a-6bf8-462f-a066-72d39f5f13b7")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW6")
 					(unit 1)
@@ -15297,7 +16518,7 @@
 			(uuid "dd7e3ca8-0985-4d94-91af-a09701634c53")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D8")
 					(unit 1)
@@ -15410,7 +16631,7 @@
 			(uuid "a1b7d35f-c34e-4f03-bddf-ce252e903f34")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D28")
 					(unit 1)
@@ -15496,7 +16717,7 @@
 			(uuid "9017fba6-c648-4593-a4f5-678c558a49e7")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "J2")
 					(unit 1)
@@ -15609,9 +16830,88 @@
 			(uuid "bf6c43b4-ad44-451e-ad97-12a47a071338")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 177.8 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db35c766-8aed-4724-9e3c-7ca510098059")
+		(property "Reference" "#PWR068"
+			(at 177.8 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 177.8 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 177.8 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2993fc2a-9137-4410-865d-81501230bfcd")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -15722,7 +17022,7 @@
 			(uuid "d69f43e6-2441-4694-856c-0ee5f9647597")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D13")
 					(unit 1)
@@ -15835,7 +17135,7 @@
 			(uuid "f17f1fd2-f148-4078-94a7-25bbd4299712")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D24")
 					(unit 1)
@@ -15929,7 +17229,7 @@
 			(uuid "5f0f5062-b12b-4a25-b8d7-349df93b9b70")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW31")
 					(unit 1)
@@ -16022,7 +17322,7 @@
 			(uuid "d79e78b8-4d37-4349-8c6f-e3de501f585b")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "C8")
 					(unit 1)
@@ -16113,7 +17413,7 @@
 			(uuid "7586919c-11af-44cf-adf2-d4d3b51dfc0a")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW17")
 					(unit 1)
@@ -16192,7 +17492,7 @@
 			(uuid "47a413db-881e-43ff-ae7d-0e4831d60e8b")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR049")
 					(unit 1)
@@ -16305,9 +17605,102 @@
 			(uuid "0ba6f74c-7135-4e9d-9b92-41811c942b9a")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 177.8 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e94e299e-7a76-4f15-9481-129be79523cc")
+		(property "Reference" "C10"
+			(at 181.61 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 181.61 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 178.77 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 177.8 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C15849"
+			(at 177.8 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0a438578-e4d1-4bfc-a2b4-a9b213a0f9c2")
+		)
+		(pin "1"
+			(uuid "171b46eb-987b-4984-aef2-ba93cf3e08fd")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -16383,7 +17776,7 @@
 			(uuid "69de086d-63c5-47ff-82bd-eaa159d11bab")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR010")
 					(unit 1)
@@ -16474,7 +17867,7 @@
 			(uuid "6f97ba10-2add-4379-8bd2-85578f61e0ae")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW30")
 					(unit 1)
@@ -16553,7 +17946,7 @@
 			(uuid "d26964b1-e5d6-41be-8308-24d9b0921da1")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR015")
 					(unit 1)
@@ -16689,9 +18082,180 @@
 			(uuid "9eeec65c-3399-469a-9510-324d5571a11c")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 193.04 99.06 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f02d0979-5798-4b5f-925a-ee4cd0edad13")
+		(property "Reference" "C6"
+			(at 196.85 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 196.85 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 194.01 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 193.04 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 193.04 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f8bce80a-2523-4258-8069-05c7d6130f8f")
+		)
+		(pin "1"
+			(uuid "1111ebbf-6862-42b1-8355-d86a442f6970")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 156.21 129.54 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f31eb5b0-b07f-4dd6-96f9-f6264d47ee9e")
+		(property "Reference" "#PWR071"
+			(at 156.21 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 156.21 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 156.21 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 156.21 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "23391394-2498-46e1-9a8c-5854f35df863")
+		)
+		(instances
+			(project "lora-calculator_jlcpcb"
+				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -16833,7 +18397,7 @@
 			(uuid "1e1d69d7-84dc-4fbd-95dc-3f20197d86a9")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "U4")
 					(unit 1)
@@ -16946,7 +18510,7 @@
 			(uuid "e783f73e-28db-4860-801f-dfe7de569695")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D5")
 					(unit 1)
@@ -17059,7 +18623,7 @@
 			(uuid "4503fbf1-fca7-4473-8482-572e2a112272")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D20")
 					(unit 1)
@@ -17150,7 +18714,7 @@
 			(uuid "1bf4b4d8-4a4e-4127-9123-ac18d0144b97")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW1")
 					(unit 1)
@@ -17229,7 +18793,7 @@
 			(uuid "e80d0d66-acc0-4145-8ec6-0b78c58b714a")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "#PWR048")
 					(unit 1)
@@ -17322,7 +18886,7 @@
 			(uuid "f4dc1f4b-515a-4ae7-b1ae-6dce9ebb65f1")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "C5")
 					(unit 1)
@@ -17413,7 +18977,7 @@
 			(uuid "71340cca-4cb5-4d2a-aba9-45fd5e39115f")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "SW23")
 					(unit 1)
@@ -17526,7 +19090,7 @@
 			(uuid "59d455c1-c0f8-49da-acbd-5dafc5478d00")
 		)
 		(instances
-			(project "lora-calculator_inlineToClaude"
+			(project "lora-calculator_jlcpcb"
 				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
 					(reference "D27")
 					(unit 1)
@@ -17540,1576 +19104,4 @@
 		)
 	)
 	(embedded_fonts no)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 200.66 106.68 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "50147743-a611-4162-ac8d-7ad767d8c54a")
-		(property "Reference" "#PWR061"
-			(at 200.66 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 200.66 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 200.66 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 200.66 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 200.66 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "74722462-5f89-4b07-a1f1-3c0d49d6b89b")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "#PWR061")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 200.66 152.4 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cdbd9e07-d50d-4aa6-a296-f18c8bd339ce")
-		(property "Reference" "#PWR062"
-			(at 200.66 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 200.66 157.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 200.66 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 200.66 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 200.66 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7581a94d-2ff2-4296-b46e-d3ec1250a7a4")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "#PWR062")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 193.04 99.06 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f02d0979-5798-4b5f-925a-ee4cd0edad13")
-		(property "Reference" "C6"
-			(at 196.85 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 196.85 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 194.01 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 193.04 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 193.04 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C14663"
-			(at 193.04 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "f8bce80a-2523-4258-8069-05c7d6130f8f")
-		)
-		(pin "1"
-			(uuid "1111ebbf-6862-42b1-8355-d86a442f6970")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 193.04 95.25 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9e3d18bd-828d-4387-9f17-e566877c701a")
-		(property "Reference" "#PWR063"
-			(at 193.04 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 193.04 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 193.04 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 193.04 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 193.04 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2fefe86b-becc-4bdc-a845-7fa556347077")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "#PWR063")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 193.04 102.87 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3502194b-d28a-4270-a240-5352c25e4208")
-		(property "Reference" "#PWR064"
-			(at 193.04 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 193.04 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 193.04 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 193.04 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 193.04 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0735ee5e-bc5b-403e-acee-4eacec7f61cd")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "#PWR064")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 208.28 99.06 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0e0d9410-4d77-455c-b521-a077d07dd981")
-		(property "Reference" "C7"
-			(at 212.09 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF"
-			(at 212.09 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 209.25 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 208.28 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 208.28 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C15850"
-			(at 208.28 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d8db6c4a-77ac-428c-921f-478c72cce15a")
-		)
-		(pin "1"
-			(uuid "26189e71-34f2-4305-9c17-553afeffc7a0")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 208.28 95.25 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "958391c0-aa85-400b-8aa7-ef3bb4f36aac")
-		(property "Reference" "#PWR065"
-			(at 208.28 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 208.28 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 208.28 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 208.28 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 208.28 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fa622798-61ee-4879-bde2-24605ffe5a03")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "#PWR065")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 208.28 102.87 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2501d222-b58f-4abb-bf5f-33cdaa005ee0")
-		(property "Reference" "#PWR066"
-			(at 208.28 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 208.28 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 208.28 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 208.28 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 208.28 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "38add05c-b073-414c-b7a1-834a1f9c98b8")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "#PWR066")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 167.64 115.57) (xy 167.64 127.0)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ac9d33b6-709d-4523-acb3-7ce43e7f73f0")
-	)
-	(wire
-		(pts
-			(xy 167.64 127.0) (xy 185.42 127.0)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a883b7b8-82ac-4386-819d-55998fa64b48")
-	)
-	(junction
-		(at 167.64 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2f4d8976-522b-4da5-b6c0-b96ea38640e5")
-	)
-	(wire
-		(pts
-			(xy 163.83 118.11) (xy 163.83 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6273602-28ce-4928-960a-f37615b6e32b")
-	)
-	(wire
-		(pts
-			(xy 163.83 129.54) (xy 185.42 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9ad707bf-2247-4646-bb3a-bed9733e8b08")
-	)
-	(junction
-		(at 163.83 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "41eb652d-8cb6-4755-9858-cf2eb26a30aa")
-	)
-	(wire
-		(pts
-			(xy 185.42 111.76) (xy 182.88 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "beea2ce4-e6cd-4ebf-ae0e-5a77787b1782")
-	)
-	(wire
-		(pts
-			(xy 182.88 111.76) (xy 182.88 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e37ccf6f-d936-4cc9-8d6a-77dc59a21ae1")
-	)
-	(junction
-		(at 182.88 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "132827c6-9135-4816-925f-ab056102803b")
-	)
-	(wire
-		(pts
-			(xy 182.88 97.79) (xy 177.8 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "929237ca-8f02-46f0-83fe-f3c6ac62fa32")
-	)
-	(junction
-		(at 177.8 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b59f2a2a-a84c-431a-bfc5-0447a18f56e7")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 182.88 93.98 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6e5a1b53-ca0f-4657-a27f-f38ddd71f170")
-		(property "Reference" "R8"
-			(at 185.42 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 185.42 95.25 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 181.1 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 182.88 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 182.88 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25804"
-			(at 182.88 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "92a1844f-9ec7-42fd-ba05-e9ffa4477554")
-		)
-		(pin "1"
-			(uuid "5d5d9e51-9e8b-45c2-848c-cf80c1ed3dad")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 182.88 90.17 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "95026e73-e10f-428b-90b0-ea83945aabb2")
-		(property "Reference" "#PWR067"
-			(at 182.88 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 182.88 85.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 182.88 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 182.88 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 182.88 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b9fbc8ce-713c-4935-a339-c2d095961bb0")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "#PWR067")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 177.8 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e94e299e-7a76-4f15-9481-129be79523cc")
-		(property "Reference" "C10"
-			(at 181.61 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 181.61 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 178.77 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 177.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 177.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C15849"
-			(at 177.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0a438578-e4d1-4bfc-a2b4-a9b213a0f9c2")
-		)
-		(pin "1"
-			(uuid "171b46eb-987b-4984-aef2-ba93cf3e08fd")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "C10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 177.8 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "db35c766-8aed-4724-9e3c-7ca510098059")
-		(property "Reference" "#PWR068"
-			(at 177.8 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 177.8 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 177.8 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 177.8 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 177.8 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2993fc2a-9137-4410-865d-81501230bfcd")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "#PWR068")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 185.42 121.92) (xy 180.34 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e925fcf-ac1b-405c-a97f-16d1cc40b271")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 180.34 118.11 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "38fdd4a4-bc3a-4ee6-bcd2-6d7d219c28f1")
-		(property "Reference" "R9"
-			(at 182.88 116.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 182.88 119.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 178.56 118.11 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 180.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 180.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25804"
-			(at 180.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "65ca39f2-edff-4a7d-825f-a9ff9844a49d")
-		)
-		(pin "1"
-			(uuid "59c0d12d-c46a-483f-a316-f1aafa1ced3a")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 180.34 114.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "518c04f0-ee15-4844-8dd9-4df52bf228ca")
-		(property "Reference" "#PWR070"
-			(at 180.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 180.34 109.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 180.34 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 180.34 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 180.34 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6f79f769-ac9f-4664-9c5b-f51fbca08d52")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "#PWR070")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 185.42 137.16) (xy 156.21 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09caba83-8cd8-47aa-a84b-a79ec1c76b6f")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 156.21 133.35 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0993571b-7546-4411-a552-5e6b5a6de89e")
-		(property "Reference" "R10"
-			(at 158.75 132.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 158.75 134.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 154.43 133.35 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 156.21 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 156.21 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25804"
-			(at 156.21 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "23e22cb7-e7f6-44f2-92e8-f629e60330f5")
-		)
-		(pin "1"
-			(uuid "9cd36d33-fd49-46f7-bbc1-8616d6aee722")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "R10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 156.21 129.54 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f31eb5b0-b07f-4dd6-96f9-f6264d47ee9e")
-		(property "Reference" "#PWR071"
-			(at 156.21 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 156.21 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 156.21 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 156.21 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 156.21 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "23391394-2498-46e1-9a8c-5854f35df863")
-		)
-		(instances
-			(project "lora-calculator"
-				(path "/b4e1791d-e673-4f6c-a3f3-581b954bc904"
-					(reference "#PWR071")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 185.42 144.78) (xy 182.88 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "16402bb4-2eeb-44a0-87f2-2168418bcc58")
-	)
-	(label "D-"
-		(at 182.88 144.78 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1150a57c-3952-4d04-b880-edb87a1108b3")
-	)
-	(wire
-		(pts
-			(xy 185.42 147.32) (xy 182.88 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0fd09ea5-19da-4cec-af2a-48bcdf47e506")
-	)
-	(label "D+"
-		(at 182.88 147.32 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "37daa4ec-7469-4379-802b-a65f0d24ef92")
-	)
-	(no_connect
-		(at 195.58 66.04)
-		(uuid "30de55d5-e565-4aec-a69d-7485323a560f")
-	)
-	(no_connect
-		(at 195.58 68.58)
-		(uuid "a28f4c12-e0b3-402c-8f10-fc1510b9c707")
-	)
-	(no_connect
-		(at 195.58 71.12)
-		(uuid "e3de5532-60ed-4824-ae97-19aae5844f10")
-	)
-	(no_connect
-		(at 170.18 48.26)
-		(uuid "bc156c8e-66d0-40de-aa57-0c334babaa60")
-	)
-	(no_connect
-		(at 170.18 45.72)
-		(uuid "0b09ca83-6340-4ee3-ae69-7c25e038b22a")
-	)
-	(no_connect
-		(at 195.58 45.72)
-		(uuid "0d3086ac-fde4-4295-b4dd-89187a32e2d3")
-	)
-	(no_connect
-		(at 195.58 48.26)
-		(uuid "baa2e1b4-8d92-4f87-9453-7aeb0c7a92ad")
-	)
-	(no_connect
-		(at 104.14 185.42)
-		(uuid "8dd84ab3-c4e8-41f0-8177-e954578d3690")
-	)
-	(no_connect
-		(at 81.28 167.64)
-		(uuid "6e91dd3e-dafe-40e2-a77e-31c196b2b60a")
-	)
-	(no_connect
-		(at 149.86 182.88)
-		(uuid "25effff2-a061-4b7c-ad36-555e3a06beb6")
-	)
-	(no_connect
-		(at 149.86 185.42)
-		(uuid "cae17d39-f523-4932-9a8c-00756417bb4e")
-	)
-	(no_connect
-		(at 185.42 132.08)
-		(uuid "db0b80e7-8520-4634-baa4-7bc7baa8af11")
-	)
-	(no_connect
-		(at 185.42 134.62)
-		(uuid "f3b64fca-7d52-470b-b6dc-d05dae6a2ec3")
-	)
-	(no_connect
-		(at 185.42 142.24)
-		(uuid "4ae48c86-fbb4-4b89-b3a5-3488db7ee915")
-	)
-	(no_connect
-		(at 215.9 111.76)
-		(uuid "a243fc7c-ba23-4361-b8dd-0293362bd0d6")
-	)
-	(no_connect
-		(at 215.9 114.3)
-		(uuid "3ba51539-69f9-4834-ae8d-30a19d0c1502")
-	)
-	(no_connect
-		(at 185.42 124.46)
-		(uuid "0d04b310-aff1-4fbf-b99c-8d6c1e849737")
-	)
-	(no_connect
-		(at 185.42 119.38)
-		(uuid "4697caab-02e4-4d31-b54d-afeaf15840f1")
-	)
-	(no_connect
-		(at 185.42 116.84)
-		(uuid "b3686c6f-af44-4399-a823-b5bb271fd524")
-	)
 )
