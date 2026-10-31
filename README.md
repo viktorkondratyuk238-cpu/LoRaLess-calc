@@ -25,6 +25,52 @@ A handheld calculator built around an ESP32-C3. It has a keypad, a small OLED sc
 - **Power:** USB-C input, MCP73831 battery charger, AP2112K-3.3 regulator, LiPo cable (J3)
 - **Extra button:** SW31 is a power switch.
 
+## Keys
+
+Layout (row 1 at top, column 1 at left; from `KEYMAP` in `firmware/src/main.cpp`):
+
+| Row | Col 1 | Col 2 | Col 3 | Col 4 | Col 5 |
+|---|---|---|---|---|---|
+| 1 | C | DEL | +/- | MEMW | COMMA |
+| 2 | x² | SQRT | ^ | MR | MC |
+| 3 | 7 | 8 | 9 | COMP | F↔D |
+| 4 | 4 | 5 | 6 | ( | ) |
+| 5 | 1 | 2 | 3 | * | / |
+| 6 | 0 | . | = | + | - |
+
+**Calculator screen**
+
+- `0`-`9`, `.`: type a number. Typing after a result starts a new calculation.
+- `+ - * / ^`: add an operator. After a result, it chains from that result.
+- `( )`: add a bracket.
+- `=`: evaluate and show the result.
+- `x²` / `SQRT`: square / square root of the last number or result.
+- `C`: clear the calculation. `DEL`: delete the last digit typed, or the last token if no digits are typed.
+- `+/-`: flip the sign of the number being typed, or of the last result.
+- `COMP`: scale the last fraction by a whole number (type the number, then `=`).
+- `F↔D`: toggle fraction / decimal display (only after an exact result).
+- `MEMW`: store the number being typed, or the last result, in memory. `MR`: recall memory (only if set). `MC`: clear memory.
+- `COMMA`: open the contacts screen.
+
+**Contacts screen**
+
+- `( )`: move the selection up / down.
+- `=`: open the selected chat.
+- `COMMA`: back to the calculator.
+
+**Chat screen**
+
+- `0`-`9`: multi-tap letters. Press the same key again within 1 second to cycle its letters (1: `1 . , ? !`; 2: `2 A B C`; ... 9: `9 W X Y Z`; 0: `0` and space). Press a different key, or wait over 1 second, for the next letter.
+- `. + - * / ^`: type that symbol.
+- `x²` / `SQRT`: replace the last number in the message with its square / square root.
+- `COMP`: start a COMP scale on the last fraction; type a whole number, then `=`.
+- `F↔D`: toggle fraction / decimal display.
+- `=`: press twice within 0.5 s to send. One press types an `=`.
+- `DEL`: delete the last character. `C`: clear the message.
+- `( )`: scroll the chat up / down (any other key returns to the bottom).
+- `COMMA`: leave the chat, back to the calculator.
+- Messages are up to 120 characters.
+
 ## Building the firmware
 
 The firmware uses [PlatformIO](https://platformio.org/). From the `firmware` folder:
