@@ -34,7 +34,7 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
 - The Windows Smart App Control setting was blocking the test programs. It has been turned off.
 
 ### Screen
-- The screen is a 1.54-inch 128x64 panel with an SSD1317 controller (I2C). U8g2's SSD1317 driver only supports 96x96 panels, so there is no matching driver.
+- The screen is a 1.54-inch 128x64 panel with an SSD1317 controller (I2C).
 - `firmware/src/ssd1317_128x64.h` is our SSD1317 128x64 driver, copied from U8g2's 96x96 SSD1317 driver with the init changed for 128x64. It builds for calc1. The init is from the datasheet command table (Rev 1.2) but is unverified on the screen.
 
 ### Tools installed on this PC (outside the project)

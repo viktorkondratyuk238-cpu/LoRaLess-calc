@@ -116,7 +116,7 @@ It prints PASS or FAIL for each check and exits with a non-zero code if any fail
 
 ## Open items
 
-- The screen is untested. U8g2's SSD1317 driver only supports 96 × 96 panels, so the firmware has its own SSD1317 128 × 64 driver (`firmware/src/ssd1317_128x64.h`). The init sequence comes from the datasheet command table, not a vendor sample.
+- The screen is untested. The firmware has its own SSD1317 128 × 64 driver (`firmware/src/ssd1317_128x64.h`). The init sequence comes from the datasheet command table, not a vendor sample.
 - The ESP-NOW radio code and the keypad have not run on hardware.
 - The screen connector J2 and the LiPo cable J3 are not in the BOM (see [Parts not in the PCB BOM](#parts-not-in-the-pcb-bom)).
 
