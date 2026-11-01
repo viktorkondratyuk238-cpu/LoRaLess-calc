@@ -1,12 +1,1 @@
-# PlatformIO build output and downloaded libraries (rebuilt by `pio run`)
-.pio/
-firmware/.pio/
 
-# Python cache from running tools/netcheck.py and tools/check_board.py
-__pycache__/
-*.pyc
-
-# KiCad backup and autosave files
-*-backup.kicad_sch
-*.kicad_prl
-*.bak
