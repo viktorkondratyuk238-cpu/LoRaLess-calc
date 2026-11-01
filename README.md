@@ -121,3 +121,6 @@ It prints PASS or FAIL for each check and exits with a non-zero code if any fail
 - The screen connector J2 and the LiPo cable J3 are not in the BOM (see [Parts not in the PCB BOM](#parts-not-in-the-pcb-bom)).
 
 Full list: [PROGRESS.md](PROGRESS.md).
+Images:<img width="700" height="835" alt="image" src="https://github.com/user-attachments/assets/87e6c960-51b7-472a-982a-fc84c9c73929" />
+<img width="920" height="778" alt="image" src="https://github.com/user-attachments/assets/52b473b4-b7fd-46d1-ae4e-4e8acb55c6a0" />
+
