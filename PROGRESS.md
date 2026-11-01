@@ -5,6 +5,8 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
 ## What has been done
 
 ### Schematic and BOM
+<img width="934" height="779" alt="image" src="https://github.com/user-attachments/assets/e4c1247a-1af1-47f1-812f-4e6c3f384ea0" />
+
 - Read the KiCad schematic, the JLCPCB BOM and all firmware files.
 - Every reference designator in the BOM is placed on the schematic. Two placed parts are not in the BOM: J2 (1x04 pin header, the screen connector) and J3 (LiPo cable).
 - Three parts are only in the library cache, not placed: CH340C, SX1262, ESP32-C3-DevKitM-1.
@@ -55,6 +57,8 @@ Status as of 2026-10-30. Nothing has run on the physical board yet.
 - **Not yet tested on the PC:** calculator memory keys (MEM W, MR, MC), keypad column digits 0 to 2, and the debounce logic.
 
 ### Hardware and PCB
+<img width="700" height="835" alt="image" src="https://github.com/user-attachments/assets/6c214657-604b-4bc7-a6d7-bbe45b497b9c" />
+
 - **Bench parts:** not yet bought. Needed are two ESP32-C3 dev boards, one MCP23017 breakout, one SSD1317 4-pin I2C OLED, a few switches and diodes, breadboard and jumper wires.
 - **Power and charging:** the charger (U3), regulator (U5), USB-C input (J1) and power switch (SW31) are untested.
 - **Keypad:** the full 30-key matrix has not been tested with real key presses.
